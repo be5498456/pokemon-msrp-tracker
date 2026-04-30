@@ -25,9 +25,10 @@
 ## Phase 4: Price History & UX
 15. Store historical snapshots
 16. Show trend lines and price deltas
-17. Add filtering/search by set, category, and stock
+17. ✅ Add client-side filtering/search by product name, set name, and category
+18. Add stock-status filtering
 
 ## Phase 5: Operational Maturity
-18. Add monitoring and alerting
-19. Add scheduled refresh workflow
-20. Add stronger test coverage and release checklist
+19. Add monitoring and alerting
+20. Add scheduled refresh workflow
+21. Add stronger test coverage and release checklist
