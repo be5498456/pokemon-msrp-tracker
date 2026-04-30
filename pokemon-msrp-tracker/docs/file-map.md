@@ -1,12 +1,14 @@
 # File Map
 
 ## Repository Root
+- `package.json`: Root proxy scripts so deployment tools can run the nested Next.js app from the repository root.
+- `vercel.json`: Vercel deployment configuration that installs and builds the nested Next.js app.
 - `.github/workflows/ci.yml`: Root GitHub Actions workflow that runs install/lint/typecheck/build inside the nested app directory.
 - `pokemon-msrp-tracker/`: Nested Next.js application folder containing all app source and project docs.
 
 ## Nested App Root (`pokemon-msrp-tracker/`)
 - `README.md`: Beginner-friendly setup and run instructions.
-- `package.json`: Project scripts and dependencies.
+- `package.json`: Actual Next.js project scripts and dependencies.
 
 ## App
 - `app/layout.tsx`: Global HTML layout and metadata for the tracker app.
