@@ -1,5 +1,6 @@
 {
-  "buildCommand": "npm run build",
-  "installCommand": "npm --prefix pokemon-msrp-tracker install",
-  "framework": "nextjs"
+  "framework": "nextjs",
+  "installCommand": "cd pokemon-msrp-tracker && npm install",
+  "buildCommand": "cd pokemon-msrp-tracker && npm run build",
+  "outputDirectory": "pokemon-msrp-tracker/.next"
 }
