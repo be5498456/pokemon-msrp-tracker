@@ -1,4 +1,4 @@
-import { ProductTable } from "@/src/components/ProductTable";
+import { SearchAndFilters } from "@/src/components/SearchAndFilters";
 import { mockProducts } from "@/src/data/mock-products";
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
         </p>
       </header>
 
-      <ProductTable products={mockProducts} />
+      <SearchAndFilters products={mockProducts} />
     </main>
   );
 }
