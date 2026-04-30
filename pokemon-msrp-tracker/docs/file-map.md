@@ -1,14 +1,17 @@
 # File Map
 
-## Root
+## Repository Root
+- `.github/workflows/ci.yml`: Root GitHub Actions workflow that runs install/lint/typecheck/build inside the nested app directory.
+- `pokemon-msrp-tracker/`: Nested Next.js application folder containing all app source and project docs.
+
+## Nested App Root (`pokemon-msrp-tracker/`)
 - `README.md`: Beginner-friendly setup and run instructions.
 - `package.json`: Project scripts and dependencies.
-- `.github/workflows/ci.yml`: CI checks for install, lint, and build.
 
 ## App
-- `app/layout.tsx`: Global HTML layout.
+- `app/layout.tsx`: Global HTML layout and metadata for the tracker app.
 - `app/page.tsx`: MVP landing page that renders the mock product list.
-- `app/globals.css`: Global styles and Tailwind import.
+- `app/globals.css`: Global styles, Tailwind import, and system font theme variables.
 
 ## Source Data & Types
 - `src/types/product.ts`: Core types (`Product`, `RetailerListing`, `Availability`, `SourceType`).
