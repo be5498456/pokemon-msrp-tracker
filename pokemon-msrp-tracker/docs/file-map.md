@@ -10,10 +10,12 @@
 
 ## App
 - `app/layout.tsx`: Global HTML layout and metadata for the tracker app.
-- `app/page.tsx`: MVP landing page that renders the mock product list.
+- `app/page.tsx`: MVP landing page that renders the mock product list via reusable product UI components.
 - `app/globals.css`: Global styles, Tailwind import, and system font theme variables.
 
 ## Source Data & Types
+- `src/components/ProductTable.tsx`: Reusable product list/table-style section for rendering product metadata, MSRP, and retailer listings.
+- `src/components/RetailerPriceCard.tsx`: Reusable retailer listing card showing current price, availability, and last-checked timestamp.
 - `src/types/product.ts`: Core types (`Product`, `RetailerListing`, `Availability`, `SourceType`).
 - `src/data/mock-products.ts`: Mock Pokémon TCG product data with retailer listings.
 - `src/lib/format.ts`: Reusable currency/date formatting helpers for UI.
