@@ -2,6 +2,7 @@
 
 ## Repository Root
 - `package.json`: Main project scripts and dependencies. This is now the real Next.js app package file.
+- `README.md`: Root onboarding notes, MVP status, and repo-root run/validation commands.
 - `vercel.json`: Minimal Vercel configuration for the root Next.js app.
 - `.github/workflows/ci.yml`: GitHub Actions workflow that runs install, lint, typecheck, and build from the repository root.
 - `next.config.ts`: Next.js configuration.
@@ -11,16 +12,16 @@
 
 ## App
 - `app/layout.tsx`: Global HTML layout and metadata for the tracker app.
-- `app/page.tsx`: MVP landing page that renders mock products and mounts client-side search/filter controls.
+- `app/page.tsx`: Public MVP homepage with hero copy, mock/manual data notice, summary stats, and client-side product controls.
 - `app/globals.css`: Global styles, Tailwind import, and system font theme variables.
 
 ## Source Data & Types
-- `src/components/ProductTable.tsx`: Reusable product list/table-style section for rendering product metadata, MSRP, and retailer listings.
-- `src/components/SearchAndFilters.tsx`: Client component that handles product/set search, category filtering, and empty-state rendering.
-- `src/components/RetailerPriceCard.tsx`: Reusable retailer listing card showing current price, availability, and last-checked timestamp.
+- `src/components/ProductTable.tsx`: Reusable product card list for rendering product metadata, release date, MSRP, and retailer listings.
+- `src/components/SearchAndFilters.tsx`: Client component that handles product/set search, category filtering, stock-status filtering, sorting, and empty-state rendering.
+- `src/components/RetailerPriceCard.tsx`: Reusable retailer listing card showing current price, scan-friendly availability label, and last-checked timestamp.
 - `src/types/product.ts`: Core types (`Product`, `RetailerListing`, `Availability`, `SourceType`).
 - `src/data/mock-products.ts`: Mock Pokemon TCG product data with retailer listings.
-- `src/lib/format.ts`: Reusable currency/date formatting helpers for UI.
+- `src/lib/format.ts`: Reusable currency, timestamp, and release-date formatting helpers for UI.
 
 ## Legacy Nested Folder
 - `pokemon-msrp-tracker/`: Legacy nested app folder from the initial create-next-app setup. New work should target the repository root files above.
