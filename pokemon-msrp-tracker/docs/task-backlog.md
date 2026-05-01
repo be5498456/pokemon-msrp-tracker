@@ -10,9 +10,7 @@
 7. Done - Improve homepage UI with reusable components
 8. Done - Add client-side filtering/search by product name, set name, and category
 9. Done - Flatten Next.js app to repository root for Vercel deployment
-
-## Next Up
-10. Add stock-status filtering
+10. Done - Polish public MVP design, stock-status filtering, summary stats, and client-side sorting
 
 ## Phase 2: Data Quality
 11. Add runtime validation for product records

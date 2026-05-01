@@ -16,3 +16,13 @@ export function formatTimestamp(isoString: string): string {
     timeStyle: "short",
   }).format(date);
 }
+
+export function formatDate(isoDate: string): string {
+  const date = new Date(`${isoDate}T00:00:00.000Z`);
+  if (Number.isNaN(date.getTime())) return "Unknown";
+
+  return new Intl.DateTimeFormat("en-US", {
+    dateStyle: "medium",
+    timeZone: "UTC",
+  }).format(date);
+}
