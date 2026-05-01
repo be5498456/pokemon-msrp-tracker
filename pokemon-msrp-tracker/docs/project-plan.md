@@ -1,24 +1,20 @@
-# Project Plan: Pokémon TCG MSRP Tracker
+# Project Plan: Pokemon TCG MSRP Reference Tracker
 
 ## Goal
-Build a free-hosted web app that clearly tracks Pokémon TCG product MSRP vs. current retailer pricing.
+Build a free-hosted web app that clearly tracks original MSRP reference values for sealed Pokemon TCG products, then later compares those MSRP values against compliant current/live prices.
 
 ## MVP Scope (Current Phase)
-The MVP uses **mock/manual data only** and shows:
+The MVP uses **manual static data only** and shows:
 - Product name and category
-- MSRP
-- Retailer links
-- Current retailer price (if available)
-- Stock status
-- Last checked timestamp
-- Clear visual separation between MSRP and current retailer price
+- Set name
+- Release date
+- Original MSRP
+- Manual source notes
+- Search/filter by product, set, year, and category
+- Newest-to-oldest default sorting
 
-Retailers represented in MVP:
-- Pokémon Center
-- Target
-- Walmart
-- Best Buy
-- GameStop
+## Future Compatibility
+The data model still keeps retailer listing fields for a later live-price phase, but those fields are not prominent in the current public MVP.
 
 ## Future Phases
 1. **Data foundation hardening**
@@ -38,6 +34,8 @@ Retailers represented in MVP:
 ## Out of Scope (for now)
 - Any scraping implementation
 - Scraping during page load
+- Live retailer fetching
+- APIs or Supabase persistence
 - CAPTCHA bypassing or bot evasion
 - Login wall bypassing
 - Checkout/cart automation
@@ -45,4 +43,4 @@ Retailers represented in MVP:
 
 ## Hosting Direction
 - Keep architecture compatible with free-tier hosting (e.g., Vercel free tier)
-- Prefer static/mock data during MVP to keep cost and complexity minimal
+- Prefer static/manual data during MVP to keep cost and complexity minimal

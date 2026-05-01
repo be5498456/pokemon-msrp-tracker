@@ -11,25 +11,26 @@
 8. Done - Add client-side filtering/search by product name, set name, and category
 9. Done - Flatten Next.js app to repository root for Vercel deployment
 10. Done - Polish public MVP design, stock-status filtering, summary stats, and client-side sorting
+11. Done - Shift public MVP focus to static 2022-present MSRP reference data
 
 ## Phase 2: Data Quality
-11. Add runtime validation for product records
-12. Add utilities for manual data updates
-13. Add tests for formatting and model validation
-14. Move project docs from legacy nested folder to root docs folder
-15. Remove legacy nested app files after root deployment is confirmed stable
+12. Add runtime validation for product records
+13. Add utilities for manual data updates
+14. Add tests for formatting and model validation
+15. Move project docs from legacy nested folder to root docs folder
+16. Remove legacy nested app files after root deployment is confirmed stable
 
 ## Phase 3: Best Buy API Integration
-16. Define Best Buy API client contract
-17. Build server-side fetch and normalization flow
-18. Persist snapshots and track stale data
-19. Add API failure and fallback handling
+17. Define Best Buy API client contract
+18. Build server-side fetch and normalization flow
+19. Persist snapshots and track stale data
+20. Add API failure and fallback handling
 
 ## Phase 4: Price History and UX
-20. Store historical snapshots
-21. Show trend lines and price deltas
+21. Store historical snapshots
+22. Show trend lines and price deltas
 
 ## Phase 5: Operational Maturity
-22. Add monitoring and alerting
-23. Add scheduled refresh workflow
-24. Add stronger test coverage and release checklist
+23. Add monitoring and alerting
+24. Add scheduled refresh workflow
+25. Add stronger test coverage and release checklist

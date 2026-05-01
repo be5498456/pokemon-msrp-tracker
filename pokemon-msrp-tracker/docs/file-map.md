@@ -12,15 +12,15 @@
 
 ## App
 - `app/layout.tsx`: Global HTML layout and metadata for the tracker app.
-- `app/page.tsx`: Public MVP homepage with hero copy, mock/manual data notice, summary stats, and client-side product controls.
+- `app/page.tsx`: Public MSRP-reference homepage with static/manual data notice, summary stats, and client-side product controls.
 - `app/globals.css`: Global styles, Tailwind import, and system font theme variables.
 
 ## Source Data & Types
-- `src/components/ProductTable.tsx`: Reusable product card list for rendering product metadata, release date, MSRP, and retailer listings.
-- `src/components/SearchAndFilters.tsx`: Client component that handles product/set search, category filtering, stock-status filtering, sorting, and empty-state rendering.
-- `src/components/RetailerPriceCard.tsx`: Reusable retailer listing card showing current price, scan-friendly availability label, and last-checked timestamp.
+- `src/components/ProductTable.tsx`: Reusable product card list for rendering product metadata, release date, prominent MSRP, and static source notes.
+- `src/components/SearchAndFilters.tsx`: Client component that handles product/set/year/category search, category filtering, year filtering, sorting, and empty-state rendering.
+- `src/components/RetailerPriceCard.tsx`: Future-compatible retailer listing card retained for later live price integrations.
 - `src/types/product.ts`: Core types (`Product`, `RetailerListing`, `Availability`, `SourceType`).
-- `src/data/mock-products.ts`: Mock Pokemon TCG product data with retailer listings.
+- `src/data/mock-products.ts`: Static/manual Pokemon TCG sealed product MSRP reference data.
 - `src/lib/format.ts`: Reusable currency, timestamp, and release-date formatting helpers for UI.
 
 ## Legacy Nested Folder
