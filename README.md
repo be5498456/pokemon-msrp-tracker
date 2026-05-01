@@ -1,10 +1,17 @@
-# Pokemon TCG MSRP Tracker
+# Pokemon TCG MSRP Reference Tracker
 
-Public-demo MVP for comparing Pokemon TCG MSRP against mock/manual retailer price and stock data.
+Public MVP for browsing manually researched original MSRP values for sealed Pokemon TCG products.
 
 ## MVP Status
 
-The active Next.js app lives at the repository root. The current public MVP uses mock/manual data only; prices and stock statuses are not live retailer data. Live retailer integrations are planned for a later phase after compliance and data-source rules are confirmed.
+The active Next.js app lives at the repository root. The current public MVP is a static/manual MSRP reference covering sealed Pokemon TCG products released from 2022 through May 1, 2026. Prices are not live retailer data, and stock status is intentionally not part of the public focus.
+
+## Data Scope
+
+- MSRP values are manually researched static reference records.
+- Data sources include official Pokemon product-gallery pages, indexed Pokemon Center listings, Bulbapedia merchandise pages for release/product cross-checks, and price-reference articles for recent high-demand sets.
+- Product lines are represented comprehensively where practical, with common sealed formats such as booster packs, booster display boxes, Elite Trainer Boxes, Pokemon Center Elite Trainer Boxes, booster bundles, Build & Battle products, tins, and premium collections.
+- Future live price comparison can reuse the retained retailer-listing model, but this MVP does not fetch retailer data.
 
 ## Run Locally
 

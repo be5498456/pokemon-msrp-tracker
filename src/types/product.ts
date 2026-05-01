@@ -19,5 +19,7 @@ export interface Product {
   releaseDate: string;
   setName: string;
   imageUrl: string | null;
+  sourceNote?: string;
+  sourceUrls?: string[];
   retailerListings: RetailerListing[];
 }

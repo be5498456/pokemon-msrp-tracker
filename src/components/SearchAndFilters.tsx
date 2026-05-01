@@ -3,22 +3,14 @@
 import { useMemo, useState } from "react";
 
 import { ProductTable } from "@/src/components/ProductTable";
-import type { Availability, Product } from "@/src/types/product";
+import type { Product } from "@/src/types/product";
 
 interface SearchAndFiltersProps {
   products: Product[];
 }
 
 type SortOption = "newest" | "oldest" | "msrp-asc" | "msrp-desc" | "name-asc";
-type StockFilter = "all" | Availability;
-
-const stockFilterOptions: { label: string; value: StockFilter }[] = [
-  { label: "All", value: "all" },
-  { label: "In stock", value: "in_stock" },
-  { label: "Out of stock", value: "out_of_stock" },
-  { label: "Preorder", value: "preorder" },
-  { label: "Unknown", value: "unknown" },
-];
+type YearFilter = "all" | string;
 
 const sortOptions: { label: string; value: SortOption }[] = [
   { label: "Newest first", value: "newest" },
@@ -31,11 +23,17 @@ const sortOptions: { label: string; value: SortOption }[] = [
 export function SearchAndFilters({ products }: SearchAndFiltersProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
-  const [selectedStock, setSelectedStock] = useState<StockFilter>("all");
+  const [selectedYear, setSelectedYear] = useState<YearFilter>("all");
   const [selectedSort, setSelectedSort] = useState<SortOption>("newest");
 
   const categories = useMemo(() => {
     return Array.from(new Set(products.map((product) => product.category))).sort();
+  }, [products]);
+
+  const years = useMemo(() => {
+    return Array.from(new Set(products.map((product) => product.releaseDate.slice(0, 4)))).sort(
+      (first, second) => second.localeCompare(first),
+    );
   }, [products]);
 
   const filteredProducts = useMemo(() => {
@@ -44,11 +42,9 @@ export function SearchAndFilters({ products }: SearchAndFiltersProps) {
     return products.filter((product) => {
       const matchesCategory =
         selectedCategory === "all" || product.category === selectedCategory;
-      const matchesStock =
-        selectedStock === "all" ||
-        product.retailerListings.some((listing) => listing.availability === selectedStock);
+      const matchesYear = selectedYear === "all" || product.releaseDate.startsWith(selectedYear);
 
-      if (!matchesCategory || !matchesStock) {
+      if (!matchesCategory || !matchesYear) {
         return false;
       }
 
@@ -58,10 +54,12 @@ export function SearchAndFilters({ products }: SearchAndFiltersProps) {
 
       return (
         product.name.toLowerCase().includes(normalizedQuery) ||
-        product.setName.toLowerCase().includes(normalizedQuery)
+        product.setName.toLowerCase().includes(normalizedQuery) ||
+        product.category.toLowerCase().includes(normalizedQuery) ||
+        product.releaseDate.slice(0, 4).includes(normalizedQuery)
       );
     });
-  }, [products, searchQuery, selectedCategory, selectedStock]);
+  }, [products, searchQuery, selectedCategory, selectedYear]);
 
   const sortedProducts = useMemo(() => {
     return [...filteredProducts].sort((first, second) => {
@@ -92,7 +90,7 @@ export function SearchAndFilters({ products }: SearchAndFiltersProps) {
           <div>
             <h2 className="text-lg font-semibold text-slate-950 dark:text-white">Browse products</h2>
             <p className="mt-1 text-sm text-slate-500 dark:text-zinc-400">
-              Showing {sortedProducts.length} of {products.length} mock products.
+              Showing {sortedProducts.length} of {products.length} manual MSRP records.
             </p>
           </div>
         </div>
@@ -100,13 +98,13 @@ export function SearchAndFilters({ products }: SearchAndFiltersProps) {
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           <label className="space-y-2">
             <span className="text-sm font-medium text-slate-700 dark:text-zinc-200">
-              Search by product or set
+              Search product, set, year, or category
             </span>
             <input
               type="search"
               value={searchQuery}
               onChange={(event) => setSearchQuery(event.target.value)}
-              placeholder="Try: Scarlet & Violet"
+              placeholder="Try: 2025, 151, or Elite Trainer Box"
               className="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none ring-blue-500 transition focus:ring-2 dark:border-zinc-700 dark:bg-zinc-950 dark:text-zinc-100"
             />
           </label>
@@ -129,16 +127,17 @@ export function SearchAndFilters({ products }: SearchAndFiltersProps) {
 
           <label className="space-y-2">
             <span className="text-sm font-medium text-slate-700 dark:text-zinc-200">
-              Stock status
+              Release year
             </span>
             <select
-              value={selectedStock}
-              onChange={(event) => setSelectedStock(event.target.value as StockFilter)}
+              value={selectedYear}
+              onChange={(event) => setSelectedYear(event.target.value)}
               className="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none ring-blue-500 transition focus:ring-2 dark:border-zinc-700 dark:bg-zinc-950 dark:text-zinc-100"
             >
-              {stockFilterOptions.map((option) => (
-                <option key={option.value} value={option.value}>
-                  {option.label}
+              <option value="all">All years</option>
+              {years.map((year) => (
+                <option key={year} value={year}>
+                  {year}
                 </option>
               ))}
             </select>
