@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { formatCurrency, formatDate } from "@/src/lib/format";
 import type { Product } from "@/src/types/product";
 
@@ -29,6 +31,25 @@ export function ProductTable({ products }: ProductTableProps) {
                 {product.sourceNote ??
                   "Manual MSRP reference data; not a live retailer price or stock signal."}
               </p>
+              <div className="mt-4 flex flex-wrap items-center gap-3 text-sm">
+                <Link
+                  href={`/products/${product.id}`}
+                  className="font-semibold text-blue-700 hover:text-blue-900 dark:text-blue-300 dark:hover:text-blue-200"
+                >
+                  View details
+                </Link>
+                {product.sourceUrls?.map((sourceUrl, index) => (
+                  <a
+                    key={sourceUrl}
+                    href={sourceUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-slate-600 underline decoration-slate-300 underline-offset-4 hover:text-slate-950 dark:text-zinc-300 dark:decoration-zinc-600 dark:hover:text-white"
+                  >
+                    Source {index + 1}
+                  </a>
+                ))}
+              </div>
             </div>
             <div className="min-w-36 rounded-lg border border-blue-200 bg-blue-50 px-4 py-3 text-left md:text-right dark:border-blue-900 dark:bg-blue-950/50">
               <p className="text-xs font-semibold uppercase text-blue-700 dark:text-blue-300">
