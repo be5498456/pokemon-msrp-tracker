@@ -91,7 +91,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
               <div className="mt-3 flex flex-wrap gap-3 text-sm">
                 {product.sourceUrls?.map((sourceUrl, index) => (
                   <a
-                    key={sourceUrl}
+                    key={`${sourceUrl}-${index}`}
                     href={sourceUrl}
                     target="_blank"
                     rel="noreferrer"
