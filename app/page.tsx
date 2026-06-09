@@ -79,6 +79,21 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-6 py-8 md:px-10 md:py-10">
         <SearchAndFilters products={mockProducts} />
       </section>
+
+      <footer className="border-t border-slate-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
+        <div className="mx-auto max-w-6xl px-6 py-5 text-sm text-slate-500 dark:text-zinc-400 md:px-10">
+          Data reviewed {formatTimestamp(dataReviewedAt)}. Found a correction?{" "}
+          <a
+            href="https://github.com/be5498456/pokemon-msrp-tracker/issues"
+            target="_blank"
+            rel="noreferrer"
+            className="font-semibold text-blue-700 hover:text-blue-900 dark:text-blue-300 dark:hover:text-blue-200"
+          >
+            Open a GitHub issue
+          </a>
+          .
+        </div>
+      </footer>
     </main>
   );
 }
