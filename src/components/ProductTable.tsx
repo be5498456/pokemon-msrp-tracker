@@ -40,7 +40,7 @@ export function ProductTable({ products }: ProductTableProps) {
                 </Link>
                 {product.sourceUrls?.map((sourceUrl, index) => (
                   <a
-                    key={sourceUrl}
+                    key={`${sourceUrl}-${index}`}
                     href={sourceUrl}
                     target="_blank"
                     rel="noreferrer"
