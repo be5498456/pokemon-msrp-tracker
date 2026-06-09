@@ -103,6 +103,7 @@ export const productImageUrls: Record<string, string> = {
   "scarlet-violet-paldea-evolved-booster-display-box": "https://archives.bulbagarden.net/media/upload/f/f5/SV2_Booster_Display_Box.jpg",
   "scarlet-violet-paldea-evolved-booster-bundle": "https://archives.bulbagarden.net/media/upload/e/e2/SV2_Booster_Bundle.jpg",
   "scarlet-violet-paldea-evolved-build-battle-stadium": "https://archives.bulbagarden.net/media/upload/e/e6/SV2_Build_Battle_Stadium.jpg",
+  "scarlet-violet-booster-pack": "https://archives.bulbagarden.net/media/upload/e/e8/SV1_pack_Koraidon.png",
   "scarlet-violet-build-battle-box": "https://archives.bulbagarden.net/media/upload/8/8f/SV1_Build_Battle_Box.jpg",
   "scarlet-violet-three-pack-blister": "https://archives.bulbagarden.net/media/upload/e/e9/SV1_Blister_Arcanine.jpg",
   "scarlet-violet-elite-trainer-box": "https://archives.bulbagarden.net/media/upload/f/f0/SV1_Koraidon_Elite_Trainer_Box.jpg",
