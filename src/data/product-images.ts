@@ -128,6 +128,47 @@ export const productImageUrls: Record<string, string> = {
   "scarlet-violet-twilight-masquerade-booster-bundle":
     "https://archives.bulbagarden.net/media/upload/a/a4/SV6_Booster_Bundle_1.jpg",
 
+  "scarlet-violet-temporal-forces-build-battle-box":
+    "https://archives.bulbagarden.net/media/upload/3/36/SV5_Build_Battle_Box.jpg",
+  "scarlet-violet-temporal-forces-three-pack-blister":
+    "https://archives.bulbagarden.net/media/upload/9/9a/SV5_Blister_Cleffa.jpg",
+  "scarlet-violet-temporal-forces-elite-trainer-box":
+    "https://archives.bulbagarden.net/media/upload/5/5b/SV5_Walking_Wake_Elite_Trainer_Box.jpg",
+  "scarlet-violet-temporal-forces-pokemon-center-elite-trainer-box":
+    "https://archives.bulbagarden.net/media/upload/b/b6/SV5_Walking_Wake_Pok%C3%A9mon_Center_Elite_Trainer_Box.jpg",
+  "scarlet-violet-temporal-forces-booster-display-box":
+    "https://archives.bulbagarden.net/media/upload/1/1b/SV5_Booster_Display_Box.png",
+  "scarlet-violet-temporal-forces-booster-bundle":
+    "https://archives.bulbagarden.net/media/upload/1/12/SV5_Booster_Bundle_1.jpg",
+
+  "paldean-fates-elite-trainer-box":
+    "https://archives.bulbagarden.net/media/upload/9/9d/SV4.5_Elite_Trainer_Box.jpg",
+  "paldean-fates-pokemon-center-elite-trainer-box":
+    "https://archives.bulbagarden.net/media/upload/0/0e/SV4.5_Pok%C3%A9mon_Center_Elite_Trainer_Box.jpg",
+  "paldean-fates-mini-tin":
+    "https://archives.bulbagarden.net/media/upload/e/e7/SV4.5_Mini_Tins.jpg",
+  "paldean-fates-tin":
+    "https://archives.bulbagarden.net/media/upload/d/d2/SV4.5_Tin_Great_Tusk.jpg",
+  "paldean-fates-premium-collection":
+    "https://archives.bulbagarden.net/media/upload/c/c1/SV4.5_Premium_Collection_Meowscarada.jpg",
+  "paldean-fates-booster-bundle":
+    "https://archives.bulbagarden.net/media/upload/2/21/SV4.5_Booster_Bundle.jpg",
+
+  "scarlet-violet-paradox-rift-build-battle-box":
+    "https://archives.bulbagarden.net/media/upload/1/1d/SV4_Build_Battle_Box.jpg",
+  "scarlet-violet-paradox-rift-build-battle-stadium":
+    "https://archives.bulbagarden.net/media/upload/4/4d/SV4_Build_Battle_Stadium.jpg",
+  "scarlet-violet-paradox-rift-three-pack-blister":
+    "https://archives.bulbagarden.net/media/upload/4/4d/SV4_Blister_Cetitan.jpg",
+  "scarlet-violet-paradox-rift-elite-trainer-box":
+    "https://archives.bulbagarden.net/media/upload/4/4a/SV4_Roaring_Moon_Elite_Trainer_Box.jpg",
+  "scarlet-violet-paradox-rift-pokemon-center-elite-trainer-box":
+    "https://archives.bulbagarden.net/media/upload/9/9f/SV4_Roaring_Moon_Pok%C3%A9mon_Center_Elite_Trainer_Box.jpg",
+  "scarlet-violet-paradox-rift-booster-display-box":
+    "https://archives.bulbagarden.net/media/upload/2/2c/SV4_Booster_Display_Box.jpg",
+  "scarlet-violet-paradox-rift-booster-bundle":
+    "https://archives.bulbagarden.net/media/upload/a/a5/SV4_Booster_Bundle.jpg",
+
   "prismatic-evolutions-pokemon-center-elite-trainer-box":
     "https://www.pokebeach.com/news/2024/11/Pokemon_TCG_Scarlet_Violet%E2%80%94Prismatic_Evolutions_Pokemon_Center_Elite_Trainer_Box-1.jpg",
   "prismatic-evolutions-elite-trainer-box":
