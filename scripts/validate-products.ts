@@ -1,6 +1,8 @@
+import { productImageUrls } from "../src/data/product-images";
 import { mockProducts } from "../src/data/mock-products";
 
 const errors: string[] = [];
+const warnings: string[] = [];
 const seenIds = new Set<string>();
 
 function isValidIsoDate(value: string): boolean {
@@ -47,6 +49,25 @@ for (const product of mockProducts) {
   if (!product.sourceUrls || product.sourceUrls.length === 0) {
     errors.push(`Product ${product.id} must have at least one sourceUrl.`);
   }
+
+  if (!product.imageUrl) {
+    warnings.push(`Missing imageUrl: ${product.id} — ${product.name}`);
+  }
+}
+
+const orphanedImageIds = Object.keys(productImageUrls).filter(
+  (productId) => !seenIds.has(productId),
+);
+
+for (const productId of orphanedImageIds) {
+  warnings.push(`Image URL has no matching product: ${productId}`);
+}
+
+if (warnings.length > 0) {
+  console.warn("Product validation warnings:");
+  for (const warning of warnings) {
+    console.warn(`- ${warning}`);
+  }
 }
 
 if (errors.length > 0) {
@@ -57,4 +78,7 @@ if (errors.length > 0) {
   process.exit(1);
 }
 
-console.log(`Product validation passed for ${mockProducts.length} products.`);
+const imageCount = mockProducts.filter((product) => product.imageUrl).length;
+console.log(
+  `Product validation passed for ${mockProducts.length} products. Images mapped: ${imageCount}/${mockProducts.length}.`,
+);
