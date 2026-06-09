@@ -32,10 +32,14 @@ type ProductInput = Omit<Product, "retailerListings" | "sourceNote" | "sourceUrl
   sourceUrls?: string[];
 };
 
+function getProductImageUrl(productId: string) {
+  return productImageUrls[productId] ? `/api/product-image/${productId}` : null;
+}
+
 function product(input: ProductInput): Product {
   return {
     ...input,
-    imageUrl: input.imageUrl ?? productImageUrls[input.id] ?? null,
+    imageUrl: input.imageUrl ?? getProductImageUrl(input.id),
     sourceNote:
       input.sourceNote ??
       "Manual MSRP reference from official Pokemon product/gallery pages, indexed Pokemon Center listings, and standard product-line MSRP patterns.",
