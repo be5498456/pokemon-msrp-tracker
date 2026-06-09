@@ -169,6 +169,51 @@ export const productImageUrls: Record<string, string> = {
   "scarlet-violet-paradox-rift-booster-bundle":
     "https://archives.bulbagarden.net/media/upload/a/a5/SV4_Booster_Bundle.jpg",
 
+  "scarlet-violet-obsidian-flames-build-battle-box":
+    "https://archives.bulbagarden.net/media/upload/a/ac/SV3_Build_Battle_Box.jpg",
+  "scarlet-violet-obsidian-flames-three-pack-blister":
+    "https://archives.bulbagarden.net/media/upload/2/23/SV3_Blister_Houndstone.jpg",
+  "scarlet-violet-obsidian-flames-elite-trainer-box":
+    "https://archives.bulbagarden.net/media/upload/2/2b/SV3_Elite_Trainer_Box.jpg",
+  "scarlet-violet-obsidian-flames-pokemon-center-elite-trainer-box":
+    "https://archives.bulbagarden.net/media/upload/7/7c/SV3_Pok%C3%A9mon_Center_Elite_Trainer_Box.jpg",
+  "scarlet-violet-obsidian-flames-booster-display-box":
+    "https://archives.bulbagarden.net/media/upload/f/fd/SV3_Booster_Display_Box.jpg",
+  "scarlet-violet-obsidian-flames-booster-bundle":
+    "https://archives.bulbagarden.net/media/upload/b/be/SV3_Booster_Bundle.jpg",
+  "scarlet-violet-obsidian-flames-build-battle-stadium":
+    "https://archives.bulbagarden.net/media/upload/7/76/SV3_Build_Battle_Stadium.jpg",
+
+  "scarlet-violet-paldea-evolved-build-battle-box":
+    "https://archives.bulbagarden.net/media/upload/c/ce/SV2_Build_Battle_Box.jpg",
+  "scarlet-violet-paldea-evolved-three-pack-blister":
+    "https://archives.bulbagarden.net/media/upload/4/48/SV2_Blister_Tinkatink.jpg",
+  "scarlet-violet-paldea-evolved-elite-trainer-box":
+    "https://archives.bulbagarden.net/media/upload/4/42/SV2_Elite_Trainer_Box.jpg",
+  "scarlet-violet-paldea-evolved-pokemon-center-elite-trainer-box":
+    "https://archives.bulbagarden.net/media/upload/b/bf/SV2_Pok%C3%A9mon_Center_Elite_Trainer_Box.jpg",
+  "scarlet-violet-paldea-evolved-booster-display-box":
+    "https://archives.bulbagarden.net/media/upload/f/f5/SV2_Booster_Display_Box.jpg",
+  "scarlet-violet-paldea-evolved-booster-bundle":
+    "https://archives.bulbagarden.net/media/upload/e/e2/SV2_Booster_Bundle.jpg",
+  "scarlet-violet-paldea-evolved-build-battle-stadium":
+    "https://archives.bulbagarden.net/media/upload/e/e6/SV2_Build_Battle_Stadium.jpg",
+
+  "scarlet-violet-build-battle-box":
+    "https://archives.bulbagarden.net/media/upload/8/8f/SV1_Build_Battle_Box.jpg",
+  "scarlet-violet-three-pack-blister":
+    "https://archives.bulbagarden.net/media/upload/e/e9/SV1_Blister_Arcanine.jpg",
+  "scarlet-violet-elite-trainer-box":
+    "https://archives.bulbagarden.net/media/upload/f/f0/SV1_Koraidon_Elite_Trainer_Box.jpg",
+  "scarlet-violet-pokemon-center-elite-trainer-box":
+    "https://archives.bulbagarden.net/media/upload/a/ab/SV1_Koraidon_Pok%C3%A9mon_Center_Elite_Trainer_Box.jpg",
+  "scarlet-violet-booster-display-box":
+    "https://archives.bulbagarden.net/media/upload/9/9c/SV1_Booster_Display_Box.jpg",
+  "scarlet-violet-booster-bundle":
+    "https://archives.bulbagarden.net/media/upload/c/c1/SV1_Booster_Bundle.jpg",
+  "scarlet-violet-build-battle-stadium":
+    "https://archives.bulbagarden.net/media/upload/5/56/SV1_Build_Battle_Stadium.jpg",
+
   "prismatic-evolutions-pokemon-center-elite-trainer-box":
     "https://www.pokebeach.com/news/2024/11/Pokemon_TCG_Scarlet_Violet%E2%80%94Prismatic_Evolutions_Pokemon_Center_Elite_Trainer_Box-1.jpg",
   "prismatic-evolutions-elite-trainer-box":
