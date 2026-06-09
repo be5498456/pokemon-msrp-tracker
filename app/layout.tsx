@@ -3,7 +3,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Pokemon MSRP Tracker",
-  description: "Track Pokemon TCG MSRP against retailer prices.",
+  description:
+    "Original MSRP reference for sealed Pokemon TCG products; not live retailer tracking, scraping, stock monitoring, or checkout automation.",
 };
 
 export default function RootLayout({
