@@ -1,6 +1,7 @@
 // Product image URLs are manually curated from public product-lineup articles or official retailer pages.
 // Prefer official Pokemon Center / Pokemon product-gallery image URLs when available.
 // PokeBeach is used for product-lineup images when official image URLs are blocked or unavailable.
+// Bulbapedia archive images are used as an allowed fallback for exact product images.
 // Do not use WordPress thumbnail URLs such as -200x200; use the original file URL for sharper images.
 
 export const productImageUrls: Record<string, string> = {
@@ -93,6 +94,39 @@ export const productImageUrls: Record<string, string> = {
     "https://www.pokebeach.com/news/2024/08/Pokemon_TCG_Scarlet_Violet%E2%80%94Surging_Sparks_Elite_Trainer_Box.png",
   "scarlet-violet-surging-sparks-pokemon-center-elite-trainer-box":
     "https://www.pokebeach.com/news/2024/08/Pokemon_TCG_Scarlet_Violet%E2%80%94Surging_Sparks_Pokemon_Center_Elite_Trainer_Box.png",
+
+  "scarlet-violet-stellar-crown-build-battle-box":
+    "https://archives.bulbagarden.net/media/upload/8/81/SV7_Build_Battle_Box.jpg",
+  "scarlet-violet-stellar-crown-elite-trainer-box":
+    "https://archives.bulbagarden.net/media/upload/1/1d/SV7_Elite_Trainer_Box.png",
+  "scarlet-violet-stellar-crown-pokemon-center-elite-trainer-box":
+    "https://archives.bulbagarden.net/media/upload/9/95/SV7_Pok%C3%A9mon_Center_Elite_Trainer_Box.png",
+  "scarlet-violet-stellar-crown-booster-display-box":
+    "https://archives.bulbagarden.net/media/upload/e/e4/SV7_Booster_Display_Box.png",
+  "scarlet-violet-stellar-crown-booster-bundle":
+    "https://archives.bulbagarden.net/media/upload/1/1e/SV7_Booster_Bundle_1.jpg",
+
+  "shrouded-fable-elite-trainer-box":
+    "https://archives.bulbagarden.net/media/upload/5/5b/Shrouded_Fable_Elite_Trainer_Box.jpg",
+  "shrouded-fable-pokemon-center-elite-trainer-box":
+    "https://archives.bulbagarden.net/media/upload/1/11/Shrouded_Fable_Pok%C3%A9mon_Center_Elite_Trainer_Box.jpg",
+  "shrouded-fable-booster-bundle":
+    "https://archives.bulbagarden.net/media/upload/1/1a/Shrouded_Fable_Booster_Bundle_1.jpg",
+  "shrouded-fable-kingdra-ex-special-illustration-collection":
+    "https://archives.bulbagarden.net/media/upload/0/08/Shrouded_Fable_Kingdra_ex_Special_Illustration_Collection.jpg",
+  "shrouded-fable-greninja-ex-special-illustration-collection":
+    "https://archives.bulbagarden.net/media/upload/5/5d/Shrouded_Fable_Greninja_ex_Special_Illustration_Collection.jpg",
+
+  "scarlet-violet-twilight-masquerade-build-battle-box":
+    "https://archives.bulbagarden.net/media/upload/f/f9/SV6_Build_Battle_Box.jpg",
+  "scarlet-violet-twilight-masquerade-elite-trainer-box":
+    "https://archives.bulbagarden.net/media/upload/4/4d/SV6_Elite_Trainer_Box.png",
+  "scarlet-violet-twilight-masquerade-pokemon-center-elite-trainer-box":
+    "https://archives.bulbagarden.net/media/upload/7/74/SV6_Pok%C3%A9mon_Center_Elite_Trainer_Box.png",
+  "scarlet-violet-twilight-masquerade-booster-display-box":
+    "https://archives.bulbagarden.net/media/upload/d/db/SV6_Booster_Display_Box.png",
+  "scarlet-violet-twilight-masquerade-booster-bundle":
+    "https://archives.bulbagarden.net/media/upload/a/a4/SV6_Booster_Bundle_1.jpg",
 
   "prismatic-evolutions-pokemon-center-elite-trainer-box":
     "https://www.pokebeach.com/news/2024/11/Pokemon_TCG_Scarlet_Violet%E2%80%94Prismatic_Evolutions_Pokemon_Center_Elite_Trainer_Box-1.jpg",
