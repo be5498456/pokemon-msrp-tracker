@@ -26,7 +26,7 @@ const recentPriceSources = [
   GAMESRADAR_PERFECT_ORDER_SOURCE,
 ];
 
-type ProductInput = Omit<Product, "imageUrl" | "retailerListings" | "sourceNote" | "sourceUrls"> & {
+type ProductInput = Omit<Product, "retailerListings" | "sourceNote" | "sourceUrls"> & {
   sourceNote?: string;
   sourceUrls?: string[];
 };
@@ -34,7 +34,7 @@ type ProductInput = Omit<Product, "imageUrl" | "retailerListings" | "sourceNote"
 function product(input: ProductInput): Product {
   return {
     ...input,
-    imageUrl: null,
+    imageUrl: input.imageUrl ?? null,
     sourceNote:
       input.sourceNote ??
       "Manual MSRP reference from official Pokemon product/gallery pages, indexed Pokemon Center listings, and standard product-line MSRP patterns.",
@@ -65,6 +65,7 @@ function regularSetProducts(
       msrp: boosterMsrp,
       releaseDate,
       setName,
+      imageUrl: null,
       sourceUrls: sources,
     }),
     product({
@@ -74,6 +75,7 @@ function regularSetProducts(
       msrp: boosterMsrp,
       releaseDate,
       setName,
+      imageUrl: null,
       sourceUrls: sources,
     }),
     product({
@@ -83,6 +85,7 @@ function regularSetProducts(
       msrp: boosterBoxMsrp,
       releaseDate,
       setName,
+      imageUrl: null,
       sourceUrls: sources,
     }),
     product({
@@ -92,6 +95,7 @@ function regularSetProducts(
       msrp: etbMsrp,
       releaseDate,
       setName,
+      imageUrl: null,
       sourceUrls: sources,
     }),
     product({
@@ -101,6 +105,7 @@ function regularSetProducts(
       msrp: pcEtbMsrp,
       releaseDate,
       setName,
+      imageUrl: null,
       sourceUrls: sources,
     }),
     product({
@@ -110,6 +115,7 @@ function regularSetProducts(
       msrp: 21.99,
       releaseDate,
       setName,
+      imageUrl: null,
       sourceUrls: sources,
     }),
     product({
@@ -119,6 +125,7 @@ function regularSetProducts(
       msrp: 59.99,
       releaseDate,
       setName,
+      imageUrl: null,
       sourceUrls: sources,
     }),
     product({
@@ -128,6 +135,7 @@ function regularSetProducts(
       msrp: threePackMsrp,
       releaseDate,
       setName,
+      imageUrl: null,
       sourceUrls: sources,
     }),
     ...(isSwsh
@@ -140,6 +148,7 @@ function regularSetProducts(
             msrp: 26.94,
             releaseDate,
             setName,
+            imageUrl: null,
             sourceUrls: sources,
           }),
         ]),
@@ -166,6 +175,7 @@ export const mockProducts: Product[] = [
     msrp: 21.99,
     releaseDate: "2026-04-24",
     setName: "Mega Evolution - Ascended Heroes",
+    imageUrl: null,
     sourceUrls: [OFFICIAL_GALLERY_SOURCE, POKEMON_CENTER_SOURCE],
   }),
   ...regularSetProducts("mega-evolution-perfect-order", "Mega Evolution - Perfect Order", "2026-03-27", "sv").map(
@@ -179,6 +189,7 @@ export const mockProducts: Product[] = [
     msrp: 119.99,
     releaseDate: "2025-11-14",
     setName: "Mega Evolution - Phantasmal Flames",
+    imageUrl: null,
     sourceUrls: [OFFICIAL_GALLERY_SOURCE, POKEMON_CENTER_SOURCE],
   }),
   ...regularSetProducts("mega-evolution", "Mega Evolution", "2025-09-26", "sv"),
@@ -189,6 +200,7 @@ export const mockProducts: Product[] = [
     msrp: 49.99,
     releaseDate: "2025-09-26",
     setName: "Mega Evolution",
+    imageUrl: null,
     sourceUrls: [OFFICIAL_GALLERY_SOURCE, POKEMON_CENTER_SOURCE],
   }),
   specialSetProduct({
@@ -198,6 +210,7 @@ export const mockProducts: Product[] = [
     msrp: 49.99,
     releaseDate: "2025-09-26",
     setName: "Mega Evolution",
+    imageUrl: null,
     sourceUrls: [OFFICIAL_GALLERY_SOURCE, POKEMON_CENTER_SOURCE],
   }),
   specialSetProduct({
@@ -207,6 +220,7 @@ export const mockProducts: Product[] = [
     msrp: 49.99,
     releaseDate: "2025-07-18",
     setName: "Scarlet & Violet - Black Bolt",
+    imageUrl: null,
     sourceUrls: recentPriceSources,
   }),
   specialSetProduct({
@@ -216,6 +230,7 @@ export const mockProducts: Product[] = [
     msrp: 59.99,
     releaseDate: "2025-07-18",
     setName: "Scarlet & Violet - Black Bolt",
+    imageUrl: null,
     sourceUrls: recentPriceSources,
   }),
   specialSetProduct({
@@ -225,6 +240,7 @@ export const mockProducts: Product[] = [
     msrp: 26.94,
     releaseDate: "2025-07-18",
     setName: "Scarlet & Violet - Black Bolt",
+    imageUrl: null,
     sourceUrls: recentPriceSources,
   }),
   specialSetProduct({
@@ -234,6 +250,7 @@ export const mockProducts: Product[] = [
     msrp: 49.99,
     releaseDate: "2025-07-18",
     setName: "Scarlet & Violet - White Flare",
+    imageUrl: null,
     sourceUrls: recentPriceSources,
   }),
   specialSetProduct({
@@ -243,6 +260,7 @@ export const mockProducts: Product[] = [
     msrp: 59.99,
     releaseDate: "2025-07-18",
     setName: "Scarlet & Violet - White Flare",
+    imageUrl: null,
     sourceUrls: recentPriceSources,
   }),
   specialSetProduct({
@@ -252,6 +270,7 @@ export const mockProducts: Product[] = [
     msrp: 26.94,
     releaseDate: "2025-07-18",
     setName: "Scarlet & Violet - White Flare",
+    imageUrl: null,
     sourceUrls: recentPriceSources,
   }),
   ...regularSetProducts("scarlet-violet-destined-rivals", "Scarlet & Violet - Destined Rivals", "2025-05-30", "sv").map(
@@ -267,6 +286,7 @@ export const mockProducts: Product[] = [
     msrp: 39.99,
     releaseDate: "2025-04-25",
     setName: "Scarlet & Violet - Journey Together",
+    imageUrl: null,
     sourceUrls: [OFFICIAL_GALLERY_SOURCE, POKEMON_CENTER_SOURCE, GAMESRADAR_JOURNEY_SOURCE],
   }),
   specialSetProduct({
@@ -276,6 +296,7 @@ export const mockProducts: Product[] = [
     msrp: 49.99,
     releaseDate: "2025-01-17",
     setName: "Scarlet & Violet - Prismatic Evolutions",
+    imageUrl: null,
     sourceUrls: [OFFICIAL_GALLERY_SOURCE, POKEMON_CENTER_SOURCE],
   }),
   specialSetProduct({
@@ -285,6 +306,7 @@ export const mockProducts: Product[] = [
     msrp: 59.99,
     releaseDate: "2025-01-17",
     setName: "Scarlet & Violet - Prismatic Evolutions",
+    imageUrl: null,
     sourceUrls: [OFFICIAL_GALLERY_SOURCE, POKEMON_CENTER_SOURCE],
   }),
   specialSetProduct({
@@ -294,6 +316,7 @@ export const mockProducts: Product[] = [
     msrp: 26.94,
     releaseDate: "2025-03-07",
     setName: "Scarlet & Violet - Prismatic Evolutions",
+    imageUrl: null,
     sourceUrls: [OFFICIAL_GALLERY_SOURCE, POKEMON_CENTER_SOURCE],
   }),
   specialSetProduct({
@@ -303,6 +326,7 @@ export const mockProducts: Product[] = [
     msrp: 29.99,
     releaseDate: "2025-01-17",
     setName: "Scarlet & Violet - Prismatic Evolutions",
+    imageUrl: null,
     sourceUrls: [OFFICIAL_GALLERY_SOURCE, POKEMON_CENTER_SOURCE],
   }),
   specialSetProduct({
@@ -312,6 +336,7 @@ export const mockProducts: Product[] = [
     msrp: 14.99,
     releaseDate: "2025-01-17",
     setName: "Scarlet & Violet - Prismatic Evolutions",
+    imageUrl: null,
     sourceUrls: [OFFICIAL_GALLERY_SOURCE, POKEMON_CENTER_SOURCE],
   }),
   specialSetProduct({
@@ -321,6 +346,7 @@ export const mockProducts: Product[] = [
     msrp: 9.99,
     releaseDate: "2025-02-07",
     setName: "Scarlet & Violet - Prismatic Evolutions",
+    imageUrl: null,
     sourceUrls: [OFFICIAL_GALLERY_SOURCE, POKEMON_CENTER_SOURCE],
   }),
   specialSetProduct({
@@ -330,6 +356,7 @@ export const mockProducts: Product[] = [
     msrp: 22.99,
     releaseDate: "2025-02-07",
     setName: "Scarlet & Violet - Prismatic Evolutions",
+    imageUrl: null,
     sourceUrls: [OFFICIAL_GALLERY_SOURCE, POKEMON_CENTER_SOURCE],
   }),
   specialSetProduct({
@@ -339,6 +366,7 @@ export const mockProducts: Product[] = [
     msrp: 69.99,
     releaseDate: "2025-09-26",
     setName: "Scarlet & Violet - Prismatic Evolutions",
+    imageUrl: null,
     sourceUrls: [OFFICIAL_GALLERY_SOURCE, POKEMON_CENTER_SOURCE],
   }),
   specialSetProduct({
@@ -348,6 +376,7 @@ export const mockProducts: Product[] = [
     msrp: 89.99,
     releaseDate: "2025-05-16",
     setName: "Scarlet & Violet - Prismatic Evolutions",
+    imageUrl: null,
     sourceUrls: [OFFICIAL_GALLERY_SOURCE, POKEMON_CENTER_SOURCE],
   }),
   ...regularSetProducts("scarlet-violet-surging-sparks", "Scarlet & Violet - Surging Sparks", "2024-11-08", "sv"),
@@ -359,6 +388,7 @@ export const mockProducts: Product[] = [
     msrp: 49.99,
     releaseDate: "2024-08-02",
     setName: "Scarlet & Violet - Shrouded Fable",
+    imageUrl: null,
     sourceUrls: svSources,
   }),
   specialSetProduct({
@@ -368,6 +398,7 @@ export const mockProducts: Product[] = [
     msrp: 59.99,
     releaseDate: "2024-08-02",
     setName: "Scarlet & Violet - Shrouded Fable",
+    imageUrl: null,
     sourceUrls: svSources,
   }),
   specialSetProduct({
@@ -377,6 +408,7 @@ export const mockProducts: Product[] = [
     msrp: 26.94,
     releaseDate: "2024-09-06",
     setName: "Scarlet & Violet - Shrouded Fable",
+    imageUrl: null,
     sourceUrls: svSources,
   }),
   specialSetProduct({
@@ -386,6 +418,7 @@ export const mockProducts: Product[] = [
     msrp: 29.99,
     releaseDate: "2024-08-02",
     setName: "Scarlet & Violet - Shrouded Fable",
+    imageUrl: null,
     sourceUrls: svSources,
   }),
   specialSetProduct({
@@ -395,6 +428,7 @@ export const mockProducts: Product[] = [
     msrp: 29.99,
     releaseDate: "2024-08-02",
     setName: "Scarlet & Violet - Shrouded Fable",
+    imageUrl: null,
     sourceUrls: svSources,
   }),
   ...regularSetProducts("scarlet-violet-twilight-masquerade", "Scarlet & Violet - Twilight Masquerade", "2024-05-24", "sv"),
@@ -406,6 +440,7 @@ export const mockProducts: Product[] = [
     msrp: 49.99,
     releaseDate: "2024-01-26",
     setName: "Scarlet & Violet - Paldean Fates",
+    imageUrl: null,
     sourceUrls: svSources,
   }),
   specialSetProduct({
@@ -415,6 +450,7 @@ export const mockProducts: Product[] = [
     msrp: 59.99,
     releaseDate: "2024-01-26",
     setName: "Scarlet & Violet - Paldean Fates",
+    imageUrl: null,
     sourceUrls: svSources,
   }),
   specialSetProduct({
@@ -424,6 +460,7 @@ export const mockProducts: Product[] = [
     msrp: 26.94,
     releaseDate: "2024-02-23",
     setName: "Scarlet & Violet - Paldean Fates",
+    imageUrl: null,
     sourceUrls: svSources,
   }),
   specialSetProduct({
@@ -433,6 +470,7 @@ export const mockProducts: Product[] = [
     msrp: 9.99,
     releaseDate: "2024-02-09",
     setName: "Scarlet & Violet - Paldean Fates",
+    imageUrl: null,
     sourceUrls: svSources,
   }),
   specialSetProduct({
@@ -442,6 +480,7 @@ export const mockProducts: Product[] = [
     msrp: 28.99,
     releaseDate: "2024-02-09",
     setName: "Scarlet & Violet - Paldean Fates",
+    imageUrl: null,
     sourceUrls: svSources,
   }),
   specialSetProduct({
@@ -451,6 +490,7 @@ export const mockProducts: Product[] = [
     msrp: 49.99,
     releaseDate: "2024-02-09",
     setName: "Scarlet & Violet - Paldean Fates",
+    imageUrl: null,
     sourceUrls: svSources,
   }),
   ...regularSetProducts("scarlet-violet-paradox-rift", "Scarlet & Violet - Paradox Rift", "2023-11-03", "sv"),
@@ -461,6 +501,7 @@ export const mockProducts: Product[] = [
     msrp: 49.99,
     releaseDate: "2023-09-22",
     setName: "Scarlet & Violet - 151",
+    imageUrl: null,
     sourceUrls: svSources,
   }),
   specialSetProduct({
@@ -470,6 +511,7 @@ export const mockProducts: Product[] = [
     msrp: 59.99,
     releaseDate: "2023-09-22",
     setName: "Scarlet & Violet - 151",
+    imageUrl: null,
     sourceUrls: svSources,
   }),
   specialSetProduct({
@@ -479,6 +521,7 @@ export const mockProducts: Product[] = [
     msrp: 26.94,
     releaseDate: "2023-09-22",
     setName: "Scarlet & Violet - 151",
+    imageUrl: null,
     sourceUrls: svSources,
   }),
   specialSetProduct({
@@ -488,6 +531,7 @@ export const mockProducts: Product[] = [
     msrp: 119.99,
     releaseDate: "2023-10-06",
     setName: "Scarlet & Violet - 151",
+    imageUrl: null,
     sourceUrls: svSources,
   }),
   specialSetProduct({
@@ -497,6 +541,7 @@ export const mockProducts: Product[] = [
     msrp: 14.99,
     releaseDate: "2023-09-22",
     setName: "Scarlet & Violet - 151",
+    imageUrl: null,
     sourceUrls: svSources,
   }),
   specialSetProduct({
@@ -506,6 +551,7 @@ export const mockProducts: Product[] = [
     msrp: 24.99,
     releaseDate: "2023-09-22",
     setName: "Scarlet & Violet - 151",
+    imageUrl: null,
     sourceUrls: svSources,
   }),
   specialSetProduct({
@@ -515,6 +561,7 @@ export const mockProducts: Product[] = [
     msrp: 21.99,
     releaseDate: "2023-10-06",
     setName: "Scarlet & Violet - 151",
+    imageUrl: null,
     sourceUrls: svSources,
   }),
   specialSetProduct({
@@ -524,6 +571,7 @@ export const mockProducts: Product[] = [
     msrp: 21.99,
     releaseDate: "2023-10-06",
     setName: "Scarlet & Violet - 151",
+    imageUrl: null,
     sourceUrls: svSources,
   }),
   ...regularSetProducts("scarlet-violet-obsidian-flames", "Scarlet & Violet - Obsidian Flames", "2023-08-11", "sv"),
@@ -536,6 +584,7 @@ export const mockProducts: Product[] = [
     msrp: 49.99,
     releaseDate: "2023-01-20",
     setName: "Crown Zenith",
+    imageUrl: null,
     sourceUrls: swshSources,
   }),
   specialSetProduct({
@@ -545,6 +594,7 @@ export const mockProducts: Product[] = [
     msrp: 64.99,
     releaseDate: "2023-01-20",
     setName: "Crown Zenith",
+    imageUrl: null,
     sourceUrls: swshSources,
   }),
   specialSetProduct({
@@ -554,6 +604,7 @@ export const mockProducts: Product[] = [
     msrp: 19.99,
     releaseDate: "2023-01-20",
     setName: "Crown Zenith",
+    imageUrl: null,
     sourceUrls: swshSources,
   }),
   specialSetProduct({
@@ -563,6 +614,7 @@ export const mockProducts: Product[] = [
     msrp: 9.99,
     releaseDate: "2023-02-17",
     setName: "Crown Zenith",
+    imageUrl: null,
     sourceUrls: swshSources,
   }),
   specialSetProduct({
@@ -572,6 +624,7 @@ export const mockProducts: Product[] = [
     msrp: 29.99,
     releaseDate: "2023-02-17",
     setName: "Crown Zenith",
+    imageUrl: null,
     sourceUrls: swshSources,
   }),
   specialSetProduct({
@@ -581,6 +634,7 @@ export const mockProducts: Product[] = [
     msrp: 24.99,
     releaseDate: "2023-03-17",
     setName: "Crown Zenith",
+    imageUrl: null,
     sourceUrls: swshSources,
   }),
   specialSetProduct({
@@ -590,6 +644,7 @@ export const mockProducts: Product[] = [
     msrp: 59.99,
     releaseDate: "2023-05-05",
     setName: "Crown Zenith",
+    imageUrl: null,
     sourceUrls: swshSources,
   }),
   ...regularSetProducts("sword-shield-silver-tempest", "Sword & Shield - Silver Tempest", "2022-11-11", "swsh"),
@@ -600,6 +655,7 @@ export const mockProducts: Product[] = [
     msrp: 119.99,
     releaseDate: "2022-10-28",
     setName: "Sword & Shield",
+    imageUrl: null,
     sourceUrls: swshSources,
   }),
   ...regularSetProducts("sword-shield-lost-origin", "Sword & Shield - Lost Origin", "2022-09-09", "swsh"),
@@ -610,6 +666,7 @@ export const mockProducts: Product[] = [
     msrp: 39.99,
     releaseDate: "2022-10-28",
     setName: "Sword & Shield - Lost Origin",
+    imageUrl: null,
     sourceUrls: swshSources,
   }),
   specialSetProduct({
@@ -619,6 +676,7 @@ export const mockProducts: Product[] = [
     msrp: 49.99,
     releaseDate: "2022-07-01",
     setName: "Pokemon GO",
+    imageUrl: null,
     sourceUrls: swshSources,
   }),
   specialSetProduct({
@@ -628,6 +686,7 @@ export const mockProducts: Product[] = [
     msrp: 64.99,
     releaseDate: "2022-07-01",
     setName: "Pokemon GO",
+    imageUrl: null,
     sourceUrls: swshSources,
   }),
   specialSetProduct({
@@ -637,6 +696,7 @@ export const mockProducts: Product[] = [
     msrp: 49.99,
     releaseDate: "2022-07-01",
     setName: "Pokemon GO",
+    imageUrl: null,
     sourceUrls: swshSources,
   }),
   specialSetProduct({
@@ -646,6 +706,7 @@ export const mockProducts: Product[] = [
     msrp: 19.99,
     releaseDate: "2022-07-01",
     setName: "Pokemon GO",
+    imageUrl: null,
     sourceUrls: swshSources,
   }),
   specialSetProduct({
@@ -655,6 +716,7 @@ export const mockProducts: Product[] = [
     msrp: 29.99,
     releaseDate: "2022-07-01",
     setName: "Pokemon GO",
+    imageUrl: null,
     sourceUrls: swshSources,
   }),
   specialSetProduct({
@@ -664,6 +726,7 @@ export const mockProducts: Product[] = [
     msrp: 8.99,
     releaseDate: "2022-08-05",
     setName: "Pokemon GO",
+    imageUrl: null,
     sourceUrls: swshSources,
   }),
   ...regularSetProducts("sword-shield-astral-radiance", "Sword & Shield - Astral Radiance", "2022-05-27", "swsh"),
