@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { ProductImage } from "@/src/components/ProductImage";
 import { mockProducts } from "@/src/data/mock-products";
 import { formatCurrency, formatDate } from "@/src/lib/format";
 
@@ -20,7 +21,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
 
   return (
     <main className="min-h-screen bg-slate-50 px-6 py-10 text-slate-950 dark:bg-zinc-950 dark:text-zinc-50 md:px-10">
-      <div className="mx-auto max-w-4xl">
+      <div className="mx-auto max-w-5xl">
         <Link
           href="/"
           className="text-sm font-semibold text-blue-700 hover:text-blue-900 dark:text-blue-300 dark:hover:text-blue-200"
@@ -29,19 +30,25 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
         </Link>
 
         <article className="mt-6 overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
-          <div className="border-b border-slate-200 p-6 dark:border-zinc-800">
-            <div className="mb-3 flex flex-wrap gap-2">
-              <span className="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700 dark:bg-zinc-800 dark:text-zinc-200">
-                {product.category}
-              </span>
-              <span className="rounded-full bg-blue-50 px-2.5 py-1 text-xs font-medium text-blue-800 dark:bg-blue-950 dark:text-blue-200">
-                Released {formatDate(product.releaseDate)}
-              </span>
+          <div className="grid gap-0 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+            <div className="border-b border-slate-200 p-6 dark:border-zinc-800 lg:border-b-0 lg:border-r">
+              <ProductImage product={product} size="hero" />
             </div>
-            <h1 className="text-3xl font-bold tracking-normal text-slate-950 dark:text-white">
-              {product.name}
-            </h1>
-            <p className="mt-2 text-base text-slate-500 dark:text-zinc-400">Set: {product.setName}</p>
+
+            <div className="border-b border-slate-200 p-6 dark:border-zinc-800">
+              <div className="mb-3 flex flex-wrap gap-2">
+                <span className="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700 dark:bg-zinc-800 dark:text-zinc-200">
+                  {product.category}
+                </span>
+                <span className="rounded-full bg-blue-50 px-2.5 py-1 text-xs font-medium text-blue-800 dark:bg-blue-950 dark:text-blue-200">
+                  Released {formatDate(product.releaseDate)}
+                </span>
+              </div>
+              <h1 className="text-3xl font-bold tracking-normal text-slate-950 dark:text-white">
+                {product.name}
+              </h1>
+              <p className="mt-2 text-base text-slate-500 dark:text-zinc-400">Set: {product.setName}</p>
+            </div>
           </div>
 
           <dl className="grid gap-px bg-slate-200 text-sm dark:bg-zinc-800 md:grid-cols-2">
