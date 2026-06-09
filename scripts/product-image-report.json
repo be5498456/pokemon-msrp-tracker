@@ -1,0 +1,312 @@
+{
+  "generatedAt": "2026-06-09T00:00:00.000Z",
+  "policy": {
+    "trustedSources": [
+      "PokeBeach product-lineup and set-guide articles",
+      "Official Pokemon product gallery",
+      "Pokemon Center product pages",
+      "Bulbapedia merchandise pages as fallback"
+    ],
+    "selectionRule": "Only high-confidence exact product matches are written to src/data/product-images.ts. Generic variants, missing products, blocked official pages, and products without exact image/source confirmation remain needs-review.",
+    "thumbnailRule": "Selected PokeBeach URLs use the original image filename with WordPress thumbnail suffixes removed."
+  },
+  "entries": [
+    {
+      "productId": "mega-evolution-ascended-heroes-elite-trainer-box",
+      "productName": "Mega Evolution - Ascended Heroes Elite Trainer Box",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2025/11/Ascended-Heroes-Elite-Trainer-Box-1.jpg",
+      "sourcePageUrl": "https://www.pokebeach.com/2026/01/ascended-heroes-set-guide-full-set-list-god-packs-reverse-holos-product-lineup-and-more",
+      "confidence": "high"
+    },
+    {
+      "productId": "mega-evolution-ascended-heroes-pokemon-center-elite-trainer-box",
+      "productName": "Mega Evolution - Ascended Heroes Pokemon Center Elite Trainer Box",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2025/11/Ascended-Heroes-Elite-Trainer-Box-Pokemon-Center.webp",
+      "sourcePageUrl": "https://www.pokebeach.com/2026/01/ascended-heroes-set-guide-full-set-list-god-packs-reverse-holos-product-lineup-and-more",
+      "confidence": "high"
+    },
+    {
+      "productId": "mega-evolution-ascended-heroes-booster-bundle",
+      "productName": "Mega Evolution - Ascended Heroes Booster Bundle",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2025/11/Pokemon_TCG_Mega_Evolution%E2%80%94Ascended_Heroes_Booster_Bundle-copy.jpg",
+      "sourcePageUrl": "https://www.pokebeach.com/2026/01/ascended-heroes-set-guide-full-set-list-god-packs-reverse-holos-product-lineup-and-more",
+      "confidence": "high"
+    },
+    {
+      "productId": "mega-evolution-perfect-order-booster-pack",
+      "productName": "Mega Evolution - Perfect Order Booster Pack",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2026/01/Pokemon_TCG_Mega_Evolution%E2%80%94Perfect_Order_Booster_Wrap_Mega_Zygarde.jpg",
+      "sourcePageUrl": "https://www.pokebeach.com/2026/03/perfect-order-set-guide-full-set-list-product-lineup-store-promotions-and-more",
+      "confidence": "high"
+    },
+    {
+      "productId": "mega-evolution-perfect-order-booster-display-box",
+      "productName": "Mega Evolution - Perfect Order Booster Display Box",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2026/01/Perfect-Order-Booster-Box.jpg",
+      "sourcePageUrl": "https://www.pokebeach.com/2026/03/perfect-order-set-guide-full-set-list-product-lineup-store-promotions-and-more",
+      "confidence": "high"
+    },
+    {
+      "productId": "mega-evolution-perfect-order-elite-trainer-box",
+      "productName": "Mega Evolution - Perfect Order Elite Trainer Box",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2026/01/Pokemon_TCG_Mega_Evolution%E2%80%94Perfect_Order_Elite_Trainer_Box.jpg",
+      "sourcePageUrl": "https://www.pokebeach.com/2026/03/perfect-order-set-guide-full-set-list-product-lineup-store-promotions-and-more",
+      "confidence": "high"
+    },
+    {
+      "productId": "mega-evolution-perfect-order-pokemon-center-elite-trainer-box",
+      "productName": "Mega Evolution - Perfect Order Pokemon Center Elite Trainer Box",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2026/01/Perfect-Order-Pokemon-Center-Elite-Trainer-Box-Tyrunt.webp",
+      "sourcePageUrl": "https://www.pokebeach.com/2026/03/perfect-order-set-guide-full-set-list-product-lineup-store-promotions-and-more",
+      "confidence": "high"
+    },
+    {
+      "productId": "mega-evolution-perfect-order-booster-bundle",
+      "productName": "Mega Evolution - Perfect Order Booster Bundle",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2026/01/Perfect-Order-Booster-Bundle.jpg",
+      "sourcePageUrl": "https://www.pokebeach.com/2026/03/perfect-order-set-guide-full-set-list-product-lineup-store-promotions-and-more",
+      "confidence": "high"
+    },
+    {
+      "productId": "mega-evolution-phantasmal-flames-booster-pack",
+      "productName": "Mega Evolution - Phantasmal Flames Booster Pack",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2025/09/Pokemon_TCG_Mega_Evolution%E2%80%94Phantasmal_Flames_Booster_Wrap_Mega_Charizard.png",
+      "sourcePageUrl": "https://www.pokebeach.com/2025/10/phantasmal-flames-set-guide-full-set-list-cut-cards-store-promos-products-and-more",
+      "confidence": "high"
+    },
+    {
+      "productId": "mega-evolution-phantasmal-flames-booster-display-box",
+      "productName": "Mega Evolution - Phantasmal Flames Booster Display Box",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2025/09/Phantasmal-Flames-Box.jpeg",
+      "sourcePageUrl": "https://www.pokebeach.com/2025/10/phantasmal-flames-set-guide-full-set-list-cut-cards-store-promos-products-and-more",
+      "confidence": "high"
+    },
+    {
+      "productId": "mega-evolution-phantasmal-flames-elite-trainer-box",
+      "productName": "Mega Evolution - Phantasmal Flames Elite Trainer Box",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2025/09/Phantasmal-Flames-ETB.jpeg",
+      "sourcePageUrl": "https://www.pokebeach.com/2025/10/phantasmal-flames-set-guide-full-set-list-cut-cards-store-promos-products-and-more",
+      "confidence": "high"
+    },
+    {
+      "productId": "mega-evolution-phantasmal-flames-pokemon-center-elite-trainer-box",
+      "productName": "Mega Evolution - Phantasmal Flames Pokemon Center Elite Trainer Box",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2025/09/Phantasmal-Flames-Pokemon-Center-ETB.webp",
+      "sourcePageUrl": "https://www.pokebeach.com/2025/10/phantasmal-flames-set-guide-full-set-list-cut-cards-store-promos-products-and-more",
+      "confidence": "high"
+    },
+    {
+      "productId": "mega-evolution-phantasmal-flames-booster-bundle",
+      "productName": "Mega Evolution - Phantasmal Flames Booster Bundle",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2025/09/Phantasmal-Flames-Booster-Bundle-1.jpg",
+      "sourcePageUrl": "https://www.pokebeach.com/2025/10/phantasmal-flames-set-guide-full-set-list-cut-cards-store-promos-products-and-more",
+      "confidence": "high"
+    },
+    {
+      "productId": "mega-evolution-phantasmal-flames-build-battle-box",
+      "productName": "Mega Evolution - Phantasmal Flames Build & Battle Box",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2025/09/Phantasmal-Flames-Build-Battle.webp",
+      "sourcePageUrl": "https://www.pokebeach.com/2025/10/phantasmal-flames-set-guide-full-set-list-cut-cards-store-promos-products-and-more",
+      "confidence": "high"
+    },
+    {
+      "productId": "mega-charizard-x-ex-ultra-premium-collection",
+      "productName": "Mega Charizard X ex Ultra-Premium Collection",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2025/09/Mega-Charizard-X-ex-Ultra-Premium-Collection.jpg",
+      "sourcePageUrl": "https://www.pokebeach.com/2025/09/mega-charizard-x-ex-ultra-premium-collection-revealed-for-november",
+      "confidence": "high"
+    },
+    {
+      "productId": "mega-evolution-booster-pack",
+      "productName": "Mega Evolution Booster Pack",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2025/07/Pokemon_TCG_Mega_Evolution_Booster_Wrap_Mega_Venusaur-copy.jpg",
+      "sourcePageUrl": "https://www.pokebeach.com/2025/09/mega-evolution-tcg-set-guide-full-english-card-list-products-cut-cards-and-more",
+      "confidence": "high"
+    },
+    {
+      "productId": "mega-evolution-booster-display-box",
+      "productName": "Mega Evolution Booster Display Box",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2025/09/Mega-Evolution-Box.webp",
+      "sourcePageUrl": "https://www.pokebeach.com/2025/09/mega-evolution-tcg-set-guide-full-english-card-list-products-cut-cards-and-more",
+      "confidence": "high"
+    },
+    {
+      "productId": "mega-evolution-booster-bundle",
+      "productName": "Mega Evolution Booster Bundle",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2025/07/Mega-Evolution-Booster-Bundle-copy.jpg",
+      "sourcePageUrl": "https://www.pokebeach.com/2025/09/mega-evolution-tcg-set-guide-full-english-card-list-products-cut-cards-and-more",
+      "confidence": "high"
+    },
+    {
+      "productId": "mega-evolution-build-battle-box",
+      "productName": "Mega Evolution Build & Battle Box",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2025/07/Mega-Evolution-Build-Battle-2-copy.jpg",
+      "sourcePageUrl": "https://www.pokebeach.com/2025/09/mega-evolution-tcg-set-guide-full-english-card-list-products-cut-cards-and-more",
+      "confidence": "high"
+    },
+    {
+      "productId": "mega-lucario-ex-figure-collection",
+      "productName": "Mega Lucario ex Figure Collection",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2025/08/20250818_184616.jpg",
+      "sourcePageUrl": "https://www.pokebeach.com/2025/08/mega-lucario-ex-figure-collection-releasing-in-november",
+      "confidence": "high"
+    },
+    {
+      "productId": "black-bolt-elite-trainer-box",
+      "productName": "Black Bolt Elite Trainer Box",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2025/05/Black-Bolt-ETB.webp",
+      "sourcePageUrl": "https://www.pokebeach.com/2025/07/black-bolt-and-white-flare-english-set-guides-full-card-lists-pull-rates-cut-cards-products-and-more",
+      "confidence": "high"
+    },
+    {
+      "productId": "black-bolt-pokemon-center-elite-trainer-box",
+      "productName": "Black Bolt Pokemon Center Elite Trainer Box",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2025/05/Black-Bolt-ETB-PC.jpg",
+      "sourcePageUrl": "https://www.pokebeach.com/2025/07/black-bolt-and-white-flare-english-set-guides-full-card-lists-pull-rates-cut-cards-products-and-more",
+      "confidence": "high"
+    },
+    {
+      "productId": "black-bolt-booster-bundle",
+      "productName": "Black Bolt Booster Bundle",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2025/05/Black-Bolt-Booster-Bundle.webp",
+      "sourcePageUrl": "https://www.pokebeach.com/2025/07/black-bolt-and-white-flare-english-set-guides-full-card-lists-pull-rates-cut-cards-products-and-more",
+      "confidence": "high"
+    },
+    {
+      "productId": "white-flare-elite-trainer-box",
+      "productName": "White Flare Elite Trainer Box",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2025/05/White-Flare-ETB.webp",
+      "sourcePageUrl": "https://www.pokebeach.com/2025/07/black-bolt-and-white-flare-english-set-guides-full-card-lists-pull-rates-cut-cards-products-and-more",
+      "confidence": "high"
+    },
+    {
+      "productId": "white-flare-pokemon-center-elite-trainer-box",
+      "productName": "White Flare Pokemon Center Elite Trainer Box",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2025/05/White-Bolt-ETB-PC.jpg",
+      "sourcePageUrl": "https://www.pokebeach.com/2025/07/black-bolt-and-white-flare-english-set-guides-full-card-lists-pull-rates-cut-cards-products-and-more",
+      "confidence": "high"
+    },
+    {
+      "productId": "white-flare-booster-bundle",
+      "productName": "White Flare Booster Bundle",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2025/05/White-Flare-Booster-Bundle.webp",
+      "sourcePageUrl": "https://www.pokebeach.com/2025/07/black-bolt-and-white-flare-english-set-guides-full-card-lists-pull-rates-cut-cards-products-and-more",
+      "confidence": "high"
+    },
+    {
+      "productId": "scarlet-violet-destined-rivals-booster-pack",
+      "productName": "Scarlet & Violet - Destined Rivals Booster Pack",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2025/03/Pokemon_TCG_Scarlet_Violet%E2%80%94Destined_Rivals_Booster_Wraps_Cynthia_Garchomp.png",
+      "sourcePageUrl": "https://www.pokebeach.com/2025/05/destined-rivals-set-guide-full-card-list-products-store-promos-and-more",
+      "confidence": "high"
+    },
+    {
+      "productId": "scarlet-violet-destined-rivals-booster-display-box",
+      "productName": "Scarlet & Violet - Destined Rivals Booster Display Box",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2025/03/Destined-Rivals-Booster-Box.webp",
+      "sourcePageUrl": "https://www.pokebeach.com/2025/05/destined-rivals-set-guide-full-card-list-products-store-promos-and-more",
+      "confidence": "high"
+    },
+    {
+      "productId": "scarlet-violet-destined-rivals-elite-trainer-box",
+      "productName": "Scarlet & Violet - Destined Rivals Elite Trainer Box",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2025/03/Pokemon_TCG_Scarlet_Violet%E2%80%94Destined_Rivals_Elite_Trainer_Box.png",
+      "sourcePageUrl": "https://www.pokebeach.com/2025/05/destined-rivals-set-guide-full-card-list-products-store-promos-and-more",
+      "confidence": "high"
+    },
+    {
+      "productId": "scarlet-violet-destined-rivals-pokemon-center-elite-trainer-box",
+      "productName": "Scarlet & Violet - Destined Rivals Pokemon Center Elite Trainer Box",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2025/03/Destined-Rivals-ETB-PC.jpg",
+      "sourcePageUrl": "https://www.pokebeach.com/2025/05/destined-rivals-set-guide-full-card-list-products-store-promos-and-more",
+      "confidence": "high"
+    },
+    {
+      "productId": "scarlet-violet-destined-rivals-build-battle-box",
+      "productName": "Scarlet & Violet - Destined Rivals Build & Battle Box",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2025/03/Destined-Rivals-Build-Battle.webp",
+      "sourcePageUrl": "https://www.pokebeach.com/2025/05/destined-rivals-set-guide-full-card-list-products-store-promos-and-more",
+      "confidence": "high"
+    },
+    {
+      "productId": "scarlet-violet-destined-rivals-booster-bundle",
+      "productName": "Scarlet & Violet - Destined Rivals Booster Bundle",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2025/03/Destined-Rivals-Booster-Bundle.webp",
+      "sourcePageUrl": "https://www.pokebeach.com/2025/05/destined-rivals-set-guide-full-card-list-products-store-promos-and-more",
+      "confidence": "high"
+    },
+    {
+      "productId": "scarlet-violet-journey-together-booster-pack",
+      "productName": "Scarlet & Violet - Journey Together Booster Pack",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2025/01/Pokemon_TCG_Scarlet_Violet%E2%80%94Journey_Together_Booster_Wrap_Iono_s_Bellibolt.png",
+      "sourcePageUrl": "https://www.pokebeach.com/2025/03/journey-together-set-guide-card-list-products-store-promos-and-booster-box-situation",
+      "confidence": "high"
+    },
+    {
+      "productId": "scarlet-violet-journey-together-booster-display-box",
+      "productName": "Scarlet & Violet - Journey Together Booster Display Box",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2025/01/Journey-Together-Booster-Box-Closed.jpg",
+      "sourcePageUrl": "https://www.pokebeach.com/2025/03/journey-together-set-guide-card-list-products-store-promos-and-booster-box-situation",
+      "confidence": "high"
+    },
+    {
+      "productId": "scarlet-violet-journey-together-elite-trainer-box",
+      "productName": "Scarlet & Violet - Journey Together Elite Trainer Box",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2025/01/Journey-Together-ETB-Front-N.jpg",
+      "sourcePageUrl": "https://www.pokebeach.com/2025/03/journey-together-set-guide-card-list-products-store-promos-and-booster-box-situation",
+      "confidence": "high"
+    },
+    {
+      "productId": "scarlet-violet-journey-together-booster-bundle",
+      "productName": "Scarlet & Violet - Journey Together Booster Bundle",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2025/01/Journey-Together-Booster-Bundle.jpg",
+      "sourcePageUrl": "https://www.pokebeach.com/2025/03/journey-together-set-guide-card-list-products-store-promos-and-booster-box-situation",
+      "confidence": "high"
+    },
+    {
+      "productId": "journey-together-lillie-premium-tournament-collection",
+      "productName": "Lillie's Clefairy ex Premium Tournament Collection",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2025/02/Lillie-Premium-Tournament-Collection-1.webp",
+      "sourcePageUrl": "https://www.pokebeach.com/2025/02/lillie-premium-tournament-collection-revealed-for-april",
+      "confidence": "high"
+    },
+    {
+      "productId": "scarlet-violet-surging-sparks-booster-pack",
+      "productName": "Scarlet & Violet - Surging Sparks Booster Pack",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2024/08/Pokemon_TCG_Scarlet_Violet%E2%80%94Surging_Sparks_Booster_Wrap_Pikachu.png",
+      "sourcePageUrl": "https://www.pokebeach.com/2024/11/surging-sparks-set-guide-card-list-secret-rares-products-and-store-promotions",
+      "confidence": "high"
+    },
+    {
+      "productId": "scarlet-violet-surging-sparks-booster-display-box",
+      "productName": "Scarlet & Violet - Surging Sparks Booster Display Box",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2024/08/Pokemon-TCG-Scarlet-Violet-Surging-Sparks-Booster-Display_EN-copy-1.jpg",
+      "sourcePageUrl": "https://www.pokebeach.com/2024/11/surging-sparks-set-guide-card-list-secret-rares-products-and-store-promotions",
+      "confidence": "high"
+    },
+    {
+      "productId": "scarlet-violet-surging-sparks-elite-trainer-box",
+      "productName": "Scarlet & Violet - Surging Sparks Elite Trainer Box",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2024/08/Pokemon_TCG_Scarlet_Violet%E2%80%94Surging_Sparks_Elite_Trainer_Box.png",
+      "sourcePageUrl": "https://www.pokebeach.com/2024/11/surging-sparks-set-guide-card-list-secret-rares-products-and-store-promotions",
+      "confidence": "high"
+    },
+    {
+      "productId": "scarlet-violet-surging-sparks-pokemon-center-elite-trainer-box",
+      "productName": "Scarlet & Violet - Surging Sparks Pokemon Center Elite Trainer Box",
+      "selectedImageUrl": "https://www.pokebeach.com/news/2024/08/Pokemon_TCG_Scarlet_Violet%E2%80%94Surging_Sparks_Pokemon_Center_Elite_Trainer_Box.png",
+      "sourcePageUrl": "https://www.pokebeach.com/2024/11/surging-sparks-set-guide-card-list-secret-rares-products-and-store-promotions",
+      "confidence": "high"
+    }
+  ],
+  "needsReview": {
+    "confidence": "needs-review",
+    "reason": "The remaining mockProducts were not written to src/data/product-images.ts because the current pass did not confirm an exact image URL from an allowed source, or the mock product represents a generic multi-variant product or a product type that the source article says was not released for that set.",
+    "examples": [
+      "generic three-pack blister products where the source only shows promo-specific variants",
+      "sleeved booster products without an exact source image in the reviewed article",
+      "Build & Battle Stadium products after PokeBeach reported the SKU was discontinued",
+      "future or mismatched collection products whose exact source image could not be confirmed from allowed sources"
+    ]
+  }
+}
