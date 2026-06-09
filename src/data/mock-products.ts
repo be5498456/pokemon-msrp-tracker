@@ -1,3 +1,4 @@
+import { productImageUrls } from "@/src/data/product-images";
 import type { Product } from "@/src/types/product";
 
 const DATA_REVIEWED_AT = "2026-05-01T12:00:00.000Z";
@@ -34,7 +35,7 @@ type ProductInput = Omit<Product, "retailerListings" | "sourceNote" | "sourceUrl
 function product(input: ProductInput): Product {
   return {
     ...input,
-    imageUrl: input.imageUrl ?? null,
+    imageUrl: input.imageUrl ?? productImageUrls[input.id] ?? null,
     sourceNote:
       input.sourceNote ??
       "Manual MSRP reference from official Pokemon product/gallery pages, indexed Pokemon Center listings, and standard product-line MSRP patterns.",
