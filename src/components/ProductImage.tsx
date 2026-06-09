@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import type { Product } from "@/src/types/product";
 
 interface ProductImageProps {
@@ -10,15 +12,21 @@ export function ProductImage({ product, size = "card" }: ProductImageProps) {
 
   if (product.imageUrl) {
     return (
-      <img
-        src={product.imageUrl}
-        alt={product.name}
+      <div
         className={[
-          "rounded-xl border border-slate-200 bg-white object-contain shadow-sm dark:border-zinc-800 dark:bg-zinc-900",
+          "relative overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm dark:border-zinc-800 dark:bg-zinc-900",
           isHero ? "aspect-[4/3] w-full" : "aspect-[4/3] w-full md:w-44",
         ].join(" ")}
-        loading={isHero ? "eager" : "lazy"}
-      />
+      >
+        <Image
+          src={product.imageUrl}
+          alt={product.name}
+          fill
+          sizes={isHero ? "(min-width: 1024px) 40vw, 100vw" : "(min-width: 768px) 176px, 100vw"}
+          className="object-contain p-3"
+          priority={isHero}
+        />
+      </div>
     );
   }
 
