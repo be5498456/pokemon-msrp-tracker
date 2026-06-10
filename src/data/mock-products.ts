@@ -24,12 +24,51 @@ const recentPriceSources = [
   GAMESRADAR_PERFECT_ORDER_SOURCE,
 ];
 
+const directProductImageUrls: Record<string, string> = {
+  "mega-evolution-perfect-order-sleeved-booster-pack":
+    "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/8b80a022-c7f9-4fc8-9e2b-11022c9baf38.png",
+  "mega-evolution-phantasmal-flames-sleeved-booster-pack":
+    "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/1846dd25-af36-458f-9dca-55fa8bbdd266.png",
+  "mega-evolution-sleeved-booster-pack":
+    "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6286e0c2-a047-42fc-a690-6ece1500506d.jpg",
+  "mega-evolution-three-pack-blister":
+    "https://archives.bulbagarden.net/media/upload/d/d6/ME1_Blister_Psyduck.png",
+  "mega-gardevoir-ex-premium-collection":
+    "https://archives.bulbagarden.net/media/upload/f/fc/Mega_Gardevoir_Premium_Poster_Collection.jpg",
+  "scarlet-violet-destined-rivals-elite-trainer-box":
+    "https://archives.bulbagarden.net/media/upload/9/94/SV10_Elite_Trainer_Box.png",
+  "scarlet-violet-destined-rivals-pokemon-center-elite-trainer-box":
+    "https://archives.bulbagarden.net/media/upload/1/19/SV10_Pok%C3%A9mon_Center_Elite_Trainer_Box.png",
+  "scarlet-violet-destined-rivals-booster-display-box":
+    "https://archives.bulbagarden.net/media/upload/a/ac/SV10_Booster_Display_Box.jpg",
+  "scarlet-violet-destined-rivals-booster-bundle":
+    "https://archives.bulbagarden.net/media/upload/8/8d/SV10_Booster_Bundle.png",
+  "scarlet-violet-twilight-masquerade-sleeved-booster-pack":
+    "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6578/6578902_sd.jpg",
+  "scarlet-violet-sleeved-booster-pack":
+    "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6531/6531831_sd.jpg",
+  "prismatic-evolutions-premium-figure-collection":
+    "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/1162/11620179_sd.jpg",
+};
+
+const excludedGeneratedProductIds = new Set([
+  "mega-evolution-ascended-heroes-booster-pack",
+  "mega-evolution-ascended-heroes-sleeved-booster-pack",
+  "mega-evolution-ascended-heroes-booster-display-box",
+  "mega-evolution-ascended-heroes-three-pack-blister",
+]);
+
 type ProductInput = Omit<Product, "retailerListings" | "sourceNote" | "sourceUrls"> & {
   sourceNote?: string;
   sourceUrls?: string[];
 };
 
 function getProductImageUrl(productId: string) {
+  const directImageUrl = directProductImageUrls[productId];
+  if (directImageUrl) {
+    return directImageUrl;
+  }
+
   return productImageUrls[productId] ? `/api/product-image/${productId}` : null;
 }
 
@@ -157,7 +196,7 @@ function specialProduct(
 
 export const dataReviewedAt = DATA_REVIEWED_AT;
 
-export const mockProducts: Product[] = [
+const rawMockProducts: Product[] = [
   ...regularSetProducts("mega-evolution-ascended-heroes", "Mega Evolution - Ascended Heroes", "2026-02-20"),
   specialProduct(
     "ascended-heroes-johto-ex-box",
@@ -257,3 +296,7 @@ export const mockProducts: Product[] = [
   ...regularSetProducts("scarlet-violet-paldea-evolved", "Scarlet & Violet - Paldea Evolved", "2023-06-09"),
   ...regularSetProducts("scarlet-violet", "Scarlet & Violet", "2023-03-31"),
 ];
+
+export const mockProducts: Product[] = rawMockProducts.filter(
+  (product) => !excludedGeneratedProductIds.has(product.id),
+);
