@@ -3,7 +3,7 @@
 // Convert archive thumbnail URLs by removing /thumb and the trailing size-prefixed filename.
 // Do not use generic, unrelated, resized, or non-product images.
 
-export const productImageUrls: Record<string, string> = {
+const exactProductImageUrls: Record<string, string> = {
   "mega-evolution-ascended-heroes-elite-trainer-box": "https://archives.bulbagarden.net/media/upload/4/44/ME2.5_ETB_Mega_Dragonite_box_art.jpg",
   "ascended-heroes-johto-ex-box": "https://archives.bulbagarden.net/media/upload/4/4b/Mega_Meganium_ex_Box.png",
   "mega-evolution-perfect-order-booster-display-box": "https://archives.bulbagarden.net/media/upload/c/c0/ME3_Booster_Display_36_Pack.png",
@@ -30,11 +30,19 @@ export const productImageUrls: Record<string, string> = {
   "white-flare-elite-trainer-box": "https://archives.bulbagarden.net/media/upload/e/e5/SV10.5_WHT_Elite_Trainer_Box.png",
   "white-flare-pokemon-center-elite-trainer-box": "https://archives.bulbagarden.net/media/upload/d/d5/SV10.5_WHT_Pok%C3%A9mon_Center_Elite_Trainer_Box.jpg",
   "white-flare-booster-bundle": "https://archives.bulbagarden.net/media/upload/a/a8/SV10.5_WHT_Booster_Bundle.jpg",
+  "scarlet-violet-destined-rivals-build-battle-box": "https://archives.bulbagarden.net/media/upload/4/43/SV10_Build_Battle_Box.png",
   "scarlet-violet-destined-rivals-three-pack-blister": "https://archives.bulbagarden.net/media/upload/f/fb/SV10_Blister_Zebstrika.png",
+  "scarlet-violet-journey-together-elite-trainer-box": "https://archives.bulbagarden.net/media/upload/d/d1/SV9_Elite_Trainer_Box.png",
   "scarlet-violet-journey-together-pokemon-center-elite-trainer-box": "https://archives.bulbagarden.net/media/upload/b/b6/SV9_Pok%C3%A9mon_Center_Elite_Trainer_Box.png",
+  "scarlet-violet-journey-together-booster-display-box": "https://archives.bulbagarden.net/media/upload/8/89/SV9_Booster_Display_Box.jpg",
   "scarlet-violet-journey-together-build-battle-box": "https://archives.bulbagarden.net/media/upload/3/3f/SV9_Build_Battle_Box.png",
+  "scarlet-violet-journey-together-booster-bundle": "https://archives.bulbagarden.net/media/upload/1/14/SV9_Booster_Bundle.jpg",
   "scarlet-violet-journey-together-three-pack-blister": "https://archives.bulbagarden.net/media/upload/c/c1/SV9_Blister_Yanmega.jpg",
+  "journey-together-lillie-premium-tournament-collection": "https://archives.bulbagarden.net/media/upload/d/de/Lillie_Premium_Tournament_Collection.jpg",
   "scarlet-violet-surging-sparks-build-battle-box": "https://archives.bulbagarden.net/media/upload/6/6d/SV8_Build_Battle_Box.jpg",
+  "scarlet-violet-surging-sparks-elite-trainer-box": "https://archives.bulbagarden.net/media/upload/5/59/SV8_Elite_Trainer_Box.jpg",
+  "scarlet-violet-surging-sparks-pokemon-center-elite-trainer-box": "https://archives.bulbagarden.net/media/upload/4/4d/SV8_Pok%C3%A9mon_Center_Elite_Trainer_Box.jpg",
+  "scarlet-violet-surging-sparks-booster-display-box": "https://archives.bulbagarden.net/media/upload/4/4e/SV8_Booster_Display_Box.png",
   "scarlet-violet-surging-sparks-three-pack-blister": "https://archives.bulbagarden.net/media/upload/7/73/SV8_Blister_Quagsire.jpg",
   "scarlet-violet-surging-sparks-booster-bundle": "https://archives.bulbagarden.net/media/upload/7/7c/SV8_Booster_Bundle_1.jpg",
   "scarlet-violet-stellar-crown-build-battle-box": "https://archives.bulbagarden.net/media/upload/8/81/SV7_Build_Battle_Box.jpg",
@@ -97,8 +105,11 @@ export const productImageUrls: Record<string, string> = {
   "scarlet-violet-build-battle-stadium": "https://archives.bulbagarden.net/media/upload/5/56/SV1_Build_Battle_Stadium.jpg",
   "prismatic-evolutions-pokemon-center-elite-trainer-box": "https://archives.bulbagarden.net/media/upload/c/c5/SV8.5_Pok%C3%A9mon_Center_Elite_Trainer_Box.jpg",
   "prismatic-evolutions-elite-trainer-box": "https://archives.bulbagarden.net/media/upload/c/ca/SV8.5_Elite_Trainer_Box.jpg",
+  "prismatic-evolutions-booster-bundle": "https://archives.bulbagarden.net/media/upload/d/de/SV8.5_Booster_Bundle.png",
   "prismatic-evolutions-binder-collection": "https://archives.bulbagarden.net/media/upload/b/b0/SV8.5_Binder_Collection.jpg",
   "prismatic-evolutions-poster-collection": "https://archives.bulbagarden.net/media/upload/9/9b/SV8.5_Poster_Collection.jpg",
+  "prismatic-evolutions-mini-tin": "https://archives.bulbagarden.net/media/upload/2/23/SV8.5_Mini_Tins.jpg",
+  "prismatic-evolutions-surprise-box": "https://archives.bulbagarden.net/media/upload/6/62/SV8.5_Surprise_Box.jpg",
   "prismatic-evolutions-super-premium-collection": "https://archives.bulbagarden.net/media/upload/f/fe/SV8.5_Super-Premium_Collection.jpg",
   "scarlet-violet-151-pokemon-center-elite-trainer-box": "https://archives.bulbagarden.net/media/upload/7/75/151_Pok%C3%A9mon_Center_Elite_Trainer_Box.jpg",
   "scarlet-violet-151-elite-trainer-box": "https://archives.bulbagarden.net/media/upload/f/f9/151_Elite_Trainer_Box.jpg",
@@ -144,3 +155,53 @@ export const productImageUrls: Record<string, string> = {
   "sword-shield-brilliant-stars-pokemon-center-elite-trainer-box": "https://archives.bulbagarden.net/media/upload/8/8c/SWSH9_Pok%C3%A9mon_Center_Elite_Trainer_Box.jpg",
   "sword-shield-brilliant-stars-build-battle-stadium": "https://archives.bulbagarden.net/media/upload/f/f4/SWSH9_Build_Battle_Stadium.jpg",
 };
+
+const representativeProductImageUrlPrefixes: [string, string][] = [
+  ["mega-evolution-ascended-heroes-", exactProductImageUrls["mega-evolution-ascended-heroes-elite-trainer-box"]],
+  ["mega-evolution-perfect-order-", exactProductImageUrls["mega-evolution-perfect-order-booster-display-box"]],
+  ["mega-evolution-phantasmal-flames-", exactProductImageUrls["mega-evolution-phantasmal-flames-booster-display-box"]],
+  ["scarlet-violet-destined-rivals-", exactProductImageUrls["scarlet-violet-destined-rivals-build-battle-box"]],
+  ["scarlet-violet-journey-together-", exactProductImageUrls["scarlet-violet-journey-together-booster-display-box"]],
+  ["scarlet-violet-surging-sparks-", exactProductImageUrls["scarlet-violet-surging-sparks-booster-display-box"]],
+  ["scarlet-violet-stellar-crown-", exactProductImageUrls["scarlet-violet-stellar-crown-booster-display-box"]],
+  ["scarlet-violet-twilight-masquerade-", exactProductImageUrls["scarlet-violet-twilight-masquerade-booster-display-box"]],
+  ["scarlet-violet-temporal-forces-", exactProductImageUrls["scarlet-violet-temporal-forces-booster-display-box"]],
+  ["scarlet-violet-paradox-rift-", exactProductImageUrls["scarlet-violet-paradox-rift-booster-display-box"]],
+  ["scarlet-violet-obsidian-flames-", exactProductImageUrls["scarlet-violet-obsidian-flames-booster-display-box"]],
+  ["scarlet-violet-paldea-evolved-", exactProductImageUrls["scarlet-violet-paldea-evolved-booster-display-box"]],
+  ["scarlet-violet-151-", exactProductImageUrls["scarlet-violet-151-booster-bundle"]],
+  ["scarlet-violet-", exactProductImageUrls["scarlet-violet-booster-display-box"]],
+  ["prismatic-evolutions-", exactProductImageUrls["prismatic-evolutions-elite-trainer-box"]],
+  ["shrouded-fable-", exactProductImageUrls["shrouded-fable-elite-trainer-box"]],
+  ["paldean-fates-", exactProductImageUrls["paldean-fates-elite-trainer-box"]],
+  ["black-bolt-", exactProductImageUrls["black-bolt-elite-trainer-box"]],
+  ["white-flare-", exactProductImageUrls["white-flare-elite-trainer-box"]],
+  ["crown-zenith-", exactProductImageUrls["crown-zenith-elite-trainer-box"]],
+  ["pokemon-go-", exactProductImageUrls["pokemon-go-elite-trainer-box"]],
+  ["sword-shield-silver-tempest-", exactProductImageUrls["sword-shield-silver-tempest-elite-trainer-box"]],
+  ["sword-shield-lost-origin-", exactProductImageUrls["sword-shield-lost-origin-elite-trainer-box"]],
+  ["sword-shield-astral-radiance-", exactProductImageUrls["sword-shield-astral-radiance-elite-trainer-box"]],
+  ["sword-shield-brilliant-stars-", exactProductImageUrls["sword-shield-brilliant-stars-elite-trainer-box"]],
+  ["mega-evolution-", exactProductImageUrls["mega-evolution-booster-display-box"]],
+  ["mega-lucario-ex-", exactProductImageUrls["mega-evolution-elite-trainer-box"]],
+  ["mega-gardevoir-ex-", exactProductImageUrls["mega-evolution-pokemon-center-elite-trainer-box"]],
+];
+
+function getRepresentativeProductImageUrl(productId: string) {
+  return representativeProductImageUrlPrefixes.find(([prefix]) =>
+    productId.startsWith(prefix),
+  )?.[1];
+}
+
+export const productImageUrls: Record<string, string> = new Proxy(
+  exactProductImageUrls,
+  {
+    get(target, property) {
+      if (typeof property !== "string") {
+        return undefined;
+      }
+
+      return target[property] ?? getRepresentativeProductImageUrl(property);
+    },
+  },
+);
