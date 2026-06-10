@@ -2,7 +2,6 @@ import { productImageUrls } from "../src/data/product-images";
 import { mockProducts } from "../src/data/mock-products";
 
 const errors: string[] = [];
-const warnings: string[] = [];
 const seenIds = new Set<string>();
 
 function isValidIsoDate(value: string): boolean {
@@ -50,8 +49,12 @@ for (const product of mockProducts) {
     errors.push(`Product ${product.id} must have at least one sourceUrl.`);
   }
 
-  if (!product.imageUrl) {
-    warnings.push(`Missing imageUrl: ${product.id} — ${product.name}`);
+  if (!productImageUrls[product.id]) {
+    errors.push(`Missing exact image URL mapping: ${product.id} — ${product.name}`);
+  }
+
+  if (product.imageUrl !== `/api/product-image/${product.id}`) {
+    errors.push(`Product ${product.id} must resolve imageUrl through /api/product-image/${product.id}.`);
   }
 }
 
@@ -60,14 +63,7 @@ const orphanedImageIds = Object.keys(productImageUrls).filter(
 );
 
 for (const productId of orphanedImageIds) {
-  warnings.push(`Image URL has no matching product: ${productId}`);
-}
-
-if (warnings.length > 0) {
-  console.warn("Product validation warnings:");
-  for (const warning of warnings) {
-    console.warn(`- ${warning}`);
-  }
+  errors.push(`Image URL has no matching product: ${productId}`);
 }
 
 if (errors.length > 0) {
