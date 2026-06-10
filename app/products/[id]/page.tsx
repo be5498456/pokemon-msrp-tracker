@@ -2,8 +2,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { ProductImage } from "@/src/components/ProductImage";
-import { mockProducts } from "@/src/data/mock-products";
 import { formatCurrency, formatDate } from "@/src/lib/format";
+import { trackedProducts } from "@/src/lib/products";
 
 interface ProductDetailPageProps {
   params: Promise<{
@@ -13,7 +13,7 @@ interface ProductDetailPageProps {
 
 export default async function ProductDetailPage({ params }: ProductDetailPageProps) {
   const { id } = await params;
-  const product = mockProducts.find((entry) => entry.id === id);
+  const product = trackedProducts.find((entry) => entry.id === id);
 
   if (!product) {
     notFound();
