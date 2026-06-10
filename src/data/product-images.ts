@@ -13,6 +13,7 @@ export const productImageUrls: Record<string, string> = {
   "mega-evolution-perfect-order-elite-trainer-box": "https://www.pokebeach.com/news/2026/01/Pokemon_TCG_Mega_Evolution%E2%80%94Perfect_Order_Elite_Trainer_Box.jpg",
   "mega-evolution-perfect-order-pokemon-center-elite-trainer-box": "https://www.pokebeach.com/news/2026/01/Perfect-Order-Pokemon-Center-Elite-Trainer-Box-Tyrunt.webp",
   "mega-evolution-perfect-order-booster-bundle": "https://www.pokebeach.com/news/2026/01/Perfect-Order-Booster-Bundle.jpg",
+  "mega-evolution-perfect-order-three-pack-blister": "https://www.pokebeach.com/news/2026/01/Perfect-Order-Blister-Chikorita.jpg",
   "mega-evolution-phantasmal-flames-booster-pack": "https://www.pokebeach.com/news/2025/09/Pokemon_TCG_Mega_Evolution%E2%80%94Phantasmal_Flames_Booster_Wrap_Mega_Charizard.png",
   "mega-evolution-phantasmal-flames-booster-display-box": "https://www.pokebeach.com/news/2025/09/Phantasmal-Flames-Box.jpeg",
   "mega-evolution-phantasmal-flames-elite-trainer-box": "https://www.pokebeach.com/news/2025/09/Phantasmal-Flames-ETB.jpeg",
