@@ -4,7 +4,6 @@
 // Do not use generic, unrelated, resized, representative, fallback, or non-product images.
 
 export const productImageUrls: Record<string, string> = {
-  "mega-evolution-ascended-heroes-booster-pack": "https://archives.bulbagarden.net/media/upload/1/1b/Ascended_Heroes_Booster.png",
   "ascended-heroes-tech-sticker-collection-mega-charizard-y": "https://archives.bulbagarden.net/media/upload/1/10/MA2.5_Tech_Sticker_Collection_Mega_Charizard_Y.jpg",
   "ascended-heroes-tech-sticker-collection-mega-gengar": "https://archives.bulbagarden.net/media/upload/d/d1/MA2.5_Tech_Sticker_Collection_Mega_Gengar.jpg",
   "ascended-heroes-collection-erika": "https://archives.bulbagarden.net/media/upload/a/aa/ME2.5_Collection_Erika.png",
