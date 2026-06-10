@@ -1,20 +1,21 @@
 import { ReleaseCheckButton } from "@/src/components/ReleaseCheckButton";
 import { SearchAndFilters } from "@/src/components/SearchAndFilters";
-import { dataReviewedAt, mockProducts } from "@/src/data/mock-products";
+import { dataReviewedAt } from "@/src/data/mock-products";
 import { formatCurrency, formatDate, formatTimestamp } from "@/src/lib/format";
+import { trackedProducts } from "@/src/lib/products";
 
 function getMostRecentProduct() {
-  return mockProducts.reduce((newest, product) => {
+  return trackedProducts.reduce((newest, product) => {
     return product.releaseDate > newest.releaseDate ? product : newest;
-  }, mockProducts[0]);
+  }, trackedProducts[0]);
 }
 
 export default function Home() {
   const newestProduct = getMostRecentProduct();
-  const releaseYears = new Set(mockProducts.map((product) => product.releaseDate.slice(0, 4)));
-  const categories = new Set(mockProducts.map((product) => product.category));
-  const lowestMsrp = Math.min(...mockProducts.map((product) => product.msrp));
-  const highestMsrp = Math.max(...mockProducts.map((product) => product.msrp));
+  const releaseYears = new Set(trackedProducts.map((product) => product.releaseDate.slice(0, 4)));
+  const categories = new Set(trackedProducts.map((product) => product.category));
+  const lowestMsrp = Math.min(...trackedProducts.map((product) => product.msrp));
+  const highestMsrp = Math.max(...trackedProducts.map((product) => product.msrp));
 
   return (
     <main className="min-h-screen bg-slate-50 text-slate-950 dark:bg-zinc-950 dark:text-zinc-50">
@@ -29,8 +30,8 @@ export default function Home() {
             </h1>
             <p className="mt-4 max-w-2xl text-base leading-7 text-slate-600 dark:text-zinc-300">
               Browse manually researched original MSRP values for sealed Pokemon TCG products released
-              from 2022 through May 1, 2026. This MVP is built for reference first, with live price
-              comparison planned for a later phase.
+              from Scarlet & Violet onward through May 1, 2026. This MVP is built for reference
+              first, with live price comparison planned for a later phase.
             </p>
           </div>
 
@@ -39,7 +40,7 @@ export default function Home() {
               <p className="text-xs font-medium uppercase text-slate-500 dark:text-zinc-400">
                 Products tracked
               </p>
-              <p className="mt-2 text-3xl font-bold">{mockProducts.length}</p>
+              <p className="mt-2 text-3xl font-bold">{trackedProducts.length}</p>
             </div>
             <div className="rounded-lg border border-blue-200 bg-blue-50 p-4 dark:border-blue-900 dark:bg-blue-950/40">
               <p className="text-xs font-medium uppercase text-blue-700 dark:text-blue-300">
@@ -80,7 +81,7 @@ export default function Home() {
       </header>
 
       <section className="mx-auto max-w-6xl px-6 py-8 md:px-10 md:py-10">
-        <SearchAndFilters products={mockProducts} />
+        <SearchAndFilters products={trackedProducts} />
       </section>
 
       <footer className="border-t border-slate-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
