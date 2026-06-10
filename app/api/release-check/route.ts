@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 
-import { dataReviewedAt, mockProducts } from "@/src/data/mock-products";
+import { dataReviewedAt } from "@/src/data/mock-products";
+import { trackedProducts } from "@/src/lib/products";
 
 const releaseSources = [
   {
@@ -12,19 +13,15 @@ const releaseSources = [
     url: "https://www.pokemoncenter.com/category/tcg-cards",
   },
   {
-    label: "Bulbapedia Scarlet & Violet merchandise",
+    label: "Bulbapedia Scarlet and Violet merchandise",
     url: "https://bulbapedia.bulbagarden.net/wiki/Scarlet_%26_Violet_TCG_Series_merchandise",
-  },
-  {
-    label: "Bulbapedia Sword & Shield merchandise",
-    url: "https://bulbapedia.bulbagarden.net/wiki/Sword_%26_Shield_TCG_Series_merchandise",
   },
 ];
 
 function getNewestProduct() {
-  return mockProducts.reduce((newest, product) => {
+  return trackedProducts.reduce((newest, product) => {
     return product.releaseDate > newest.releaseDate ? product : newest;
-  }, mockProducts[0]);
+  }, trackedProducts[0]);
 }
 
 export function GET() {
@@ -33,7 +30,7 @@ export function GET() {
   return NextResponse.json({
     checkedAt: new Date().toISOString(),
     dataReviewedAt,
-    trackedProductCount: mockProducts.length,
+    trackedProductCount: trackedProducts.length,
     newestTrackedProduct: {
       id: newestProduct.id,
       name: newestProduct.name,
@@ -42,6 +39,6 @@ export function GET() {
     },
     releaseSources,
     message:
-      "This MVP uses manually reviewed static MSRP data. Use these source links to check for new releases before adding them to the curated product data.",
+      "This MVP uses manually reviewed static MSRP data for Scarlet and Violet era products and newer. Use these source links to check for new releases before adding them to the curated product data.",
   });
 }
