@@ -172,7 +172,6 @@ function specialSetProduct(input: ProductInput): Product {
 }
 
 const specialProducts: ProductInput[] = [
-  productInput("mega-evolution-ascended-heroes-booster-pack", "Mega Evolution - Ascended Heroes Booster Pack", "Booster Pack", 4.49, "2026-01-30", "Mega Evolution - Ascended Heroes", ascendedHeroesSources),
   productInput("ascended-heroes-tech-sticker-collection-mega-charizard-y", "Ascended Heroes Tech Sticker Collection - Mega Charizard Y", "Tech Sticker Collection", 18.99, "2026-01-30", "Mega Evolution - Ascended Heroes", ascendedHeroesSources),
   productInput("ascended-heroes-tech-sticker-collection-mega-gengar", "Ascended Heroes Tech Sticker Collection - Mega Gengar", "Tech Sticker Collection", 18.99, "2026-01-30", "Mega Evolution - Ascended Heroes", ascendedHeroesSources),
   productInput("ascended-heroes-collection-erika", "Ascended Heroes Collection - Erika's Tangela", "Collection Box", 9.99, "2026-02-20", "Mega Evolution - Ascended Heroes", ascendedHeroesSources),
