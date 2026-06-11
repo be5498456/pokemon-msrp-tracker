@@ -65,3 +65,12 @@ Suggested continuation process:
 5. Update `scripts/product-image-report.json` so selected entries are recorded and remaining missing rows stay `needs-review`.
 6. Commit through GitHub.
 7. After every commit, summarize which SV+ sets still have missing images and the total count still missing.
+
+## Cursor Cloud specific instructions
+
+This is a single Next.js 16 app (App Router, Turbopack) at the repository root; the nested `pokemon-msrp-tracker/` folder is legacy docs/storage, not a second app. There is no database, env file, or external service to run — all product/MSRP data is static under `src/data/`.
+
+- Package manager is npm (`package-lock.json`); Node 22 / Node 20 both work. The update script runs `npm install` for you on startup.
+- Standard commands (see `package.json` and `.github/workflows/ci.yml`): `npm run dev` (dev server on port 3000), `npm run lint`, `npm run typecheck`, `npm run validate:data`, `npm run build`. CI gates on lint + typecheck + validate:data + build.
+- `npm run validate:data` (`scripts/validate-products.ts`) enforces that every product in `src/data/mock-products.ts` has a mapped image in `src/data/product-images.ts`; run it after editing either file.
+- The `/api/release-check` endpoint is GET-only (returns the newest tracked product as JSON); POSTing returns empty.
